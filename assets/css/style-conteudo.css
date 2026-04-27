@@ -259,7 +259,7 @@ button:focus-visible,
 }
 
 #conteudo-unidade {
-    width: min(95%, 1300px);
+    width: min(100%, 1300px);
     margin: 0 auto;
 }
 
