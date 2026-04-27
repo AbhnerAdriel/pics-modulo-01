@@ -173,7 +173,7 @@ button:focus-visible,
 
 #banner-modulo {
     width: 100%;
-    height: 650px;
+    height: 550px;
 
     position: relative;
 
@@ -639,7 +639,7 @@ button:focus-visible,
     font-family: var(--fonte-auxiliar);
     font-size: 18px;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .unidade-card-categoria::after {

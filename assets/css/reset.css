@@ -17,3 +17,6 @@ table {
     border-spacing: 0;
 }
 
+p {
+    text-align: justify;
+}
