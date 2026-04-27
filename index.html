@@ -11,11 +11,17 @@
 </head>
 
 <body>
-    <header id="banner-modulo">
-        <div class="dark-overlay"></div>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header id="banner-modulo" aria-labelledby="banner-modulo-titulo">
+        <div class="dark-overlay" aria-hidden="true"></div>
 
         <div id="banner-modulo-box-textual">
-            <img id="banner-modulo-logo" src="./assets/images/PNPIC_logo_BR.png" alt="Logo PNPIC">
+            <img
+                id="banner-modulo-logo"
+                src="./assets/images/PNPIC_logo_BR.png"
+                alt="Logotipo da Política Nacional de Práticas Integrativas e Complementares">
+
             <h1 id="banner-modulo-titulo">
                 Práticas Integrativas e Complementares em Saúde (PICS) na atuação de
                 Agentes Comunitários de Saúde e Agentes de Combate às Endemias
@@ -23,713 +29,798 @@
         </div>
     </header>
 
-    <section id="banner-informacoes-modulo">
-        <div id="banner-informacoes-modulo-container">
+    <main id="conteudo-principal" tabindex="-1">
+        <section id="banner-informacoes-modulo" aria-labelledby="resumo-modulo-titulo">
+            <h2 id="resumo-modulo-titulo" class="visually-hidden">Resumo do módulo</h2>
 
-            <div class="banner-info-card">
-                <span class="banner-info-numero">01.</span>
+            <div id="banner-informacoes-modulo-container" role="list">
 
-                <div class="banner-info-conteudo">
-                    <h2>Carga Horária</h2>
-                    <p>20 horas</p>
-                </div>
+                <article class="banner-info-card" role="listitem" aria-labelledby="info-carga-horaria-titulo">
+                    <span class="banner-info-numero" aria-hidden="true">01.</span>
+
+                    <div class="banner-info-conteudo">
+                        <h3 id="info-carga-horaria-titulo">Carga Horária</h3>
+                        <p>20 horas</p>
+                    </div>
+                </article>
+
+                <article class="banner-info-card" role="listitem" aria-labelledby="info-unidades-titulo">
+                    <span class="banner-info-numero" aria-hidden="true">02.</span>
+
+                    <div class="banner-info-conteudo">
+                        <h3 id="info-unidades-titulo">Número de Unidades</h3>
+                        <p>5 unidades</p>
+                    </div>
+                </article>
+
+                <article class="banner-info-card" role="listitem" aria-labelledby="info-certificacao-titulo">
+                    <span class="banner-info-numero" aria-hidden="true">03.</span>
+
+                    <div class="banner-info-conteudo">
+                        <h3 id="info-certificacao-titulo">Com Certificação</h3>
+                        <p>Sim</p>
+                    </div>
+                </article>
+
+                <article class="banner-info-card" role="listitem" aria-labelledby="info-publico-titulo">
+                    <span class="banner-info-numero" aria-hidden="true">04.</span>
+
+                    <div class="banner-info-conteudo">
+                        <h3 id="info-publico-titulo">Público-alvo</h3>
+                        <p>Agentes Comunitários de Saúde e Agentes de Combate às Endemias</p>
+                    </div>
+                </article>
+
             </div>
+        </section>
 
-            <div class="banner-info-card">
-                <span class="banner-info-numero">02.</span>
+        <section id="forum-pratica" aria-labelledby="forum-pratica-titulo" aria-describedby="forum-pratica-descricao">
+            <div id="forum-pratica-card">
 
-                <div class="banner-info-conteudo">
-                    <h2>Número de Unidades</h2>
-                    <p>4 unidades</p>
+                <div id="forum-pratica-conteudo">
+                    <span id="forum-pratica-tag">Fórum do Módulo</span>
+
+                    <h2 id="forum-pratica-titulo">Dialogando com a Prática</h2>
+
+                    <p id="forum-pratica-descricao">
+                        Os fóruns foram pensados como espaços de diálogo, escuta e troca entre os
+                        participantes do módulo. Compartilhe experiências, tire dúvidas,
+                        reflita sobre os conteúdos estudados e dialogue com outros alunos sobre a
+                        aplicação das PICS na prática cotidiana.
+                    </p>
+
+                    <a
+                        href="./forum-dialogando-com-a-pratica.html"
+                        id="forum-pratica-botao"
+                        aria-label="Acessar o fórum Dialogando com a Prática">
+                        Acessar fórum
+                        <span aria-hidden="true">→</span>
+                    </a>
                 </div>
-            </div>
 
-            <div class="banner-info-card">
-                <span class="banner-info-numero">03.</span>
-
-                <div class="banner-info-conteudo">
-                    <h2>Com Certificação</h2>
-                    <p>Sim</p>
+                <div id="forum-pratica-imagem">
+                    <img
+                        src="./assets/images/forum-dialogando-com-a-pratica.jpg"
+                        alt="Pessoas dialogando em um espaço de aprendizagem colaborativa">
                 </div>
+
             </div>
+        </section>
 
-            <div class="banner-info-card">
-                <span class="banner-info-numero">04.</span>
+        <section id="unidades-modulo" aria-labelledby="unidades-modulo-titulo">
+            <div id="unidades-modulo-cabecalho">
+                <span>Conteúdo do Módulo</span>
 
-                <div class="banner-info-conteudo">
-                    <h2>Público-alvo</h2>
-                    <p>Agentes Comunitários de Saúde e Agentes de Combate às Endemias</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="forum-pratica" aria-labelledby="forum-pratica-titulo">
-        <div id="forum-pratica-card">
-
-            <div id="forum-pratica-conteudo">
-                <span id="forum-pratica-tag">Fórum do Módulo</span>
-
-                <h2 id="forum-pratica-titulo">Dialogando com a Prática</h2>
+                <h2 id="unidades-modulo-titulo">Unidades do Módulo</h2>
 
                 <p>
-                    Os fóruns foram pensados como espaços de diálogo, escuta e troca entre os
-                    participantes do módulo. Compartilhe experiências, tire dúvidas,
-                    reflita sobre os conteúdos estudados e dialogue com outros alunos sobre a
-                    aplicação das PICS na prática cotidiana.
+                    Este módulo foi organizado em cinco unidades, abordando conceitos, bases legais,
+                    práticas integrativas, atuação no território, questões éticas e avaliação final.
                 </p>
-
-                <a href="#" id="forum-pratica-botao">
-                    Acessar fórum
-                    <span aria-hidden="true">→</span>
-                </a>
             </div>
 
-            <div id="forum-pratica-imagem">
-                <img src="./assets/images/forum-dialogando-com-a-pratica.jpg"
-                    alt="Pessoas dialogando em um espaço de aprendizagem colaborativa">
+            <div id="unidades-modulo-lista" role="list">
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-1-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/Banner-PICS-para-ACS-e-ACE.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Unidade 1</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-1-titulo">Introdução às PICS no SUS: princípios e bases legais</h3>
+                        <p>
+                            Conheça os fundamentos das PICS, sua organização no SUS e suas bases legais.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade-1/index.html"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Unidade 1: Introdução às PICS no SUS, princípios e bases legais">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-2-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/Banner-PICS-para-ACS-e-ACE.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Unidade 2</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-2-titulo">Práticas integradas à atuação dos ACS e ACE - Parte I</h3>
+                        <p>
+                            Explore práticas que dialogam com o cuidado em saúde no território.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade-2/index.html"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Unidade 2: Práticas integradas à atuação dos ACS e ACE - Parte I">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-3-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/Banner-PICS-para-ACS-e-ACE.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Unidade 3</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-3-titulo">Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
+                        <p>
+                            Aprofunde práticas integrativas e reflita sobre limites, segurança e responsabilidade.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade-3/index.html"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Unidade 3: Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-4-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/Banner-PICS-para-ACS-e-ACE.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Unidade 4</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-4-titulo">Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
+                        <p>
+                            Consolide orientações éticas para a atuação segura dos ACS e ACE com as PICS.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade-4/index.html"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Unidade 4: Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-5-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/Banner-PICS-para-ACS-e-ACE.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Unidade 5</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-5-titulo">Autoavaliação e Avaliação do módulo</h3>
+                        <p>
+                            Revise os aprendizados e realize a avaliação final do módulo.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade-5/index.html"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Unidade 5: Autoavaliação e Avaliação do módulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="faq-modulo" aria-labelledby="faq-modulo-titulo">
+            <div id="faq-modulo-cabecalho">
+                <span>Fique por dentro</span>
+                <h2 id="faq-modulo-titulo">Informações sobre o Módulo</h2>
             </div>
 
-        </div>
-    </section>
+            <div id="faq-modulo-container">
 
-    <section id="unidades-modulo">
-        <div id="unidades-modulo-cabecalho">
-            <span>Conteúdo do Módulo</span>
-            <h2>Unidades do Módulo</h2>
-            <p>
-                Este módulo foi organizado em seis unidades, abordando desde os conceitos de Yoga
-                até suas possibilidades de atuação como prática integrativa em saúde.
-            </p>
-        </div>
+                <article class="faq-item ativo">
+                    <h3>
+                        <button
+                            id="faq-pergunta-1"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="true"
+                            aria-controls="faq-resposta-1">
+                            <span>Qual é o Objetivo do Módulo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
 
-        <div id="unidades-modulo-lista">
-
-            <article class="unidade-card">
-                <div class="unidade-card-imagem">
-                    <img src="./assets/images/Banner-PICS-para-ACS-e-ACE.png" alt="Imagem representativa da Unidade 1">
-                    <span class="unidade-card-categoria">Unidade 1</span>
-                </div>
-
-                <div class="unidade-card-conteudo">
-                    <h3>Introdução às PICS no SUS: princípios e bases legais</h3>
-                    <p>
-                        Conheça os fundamentos das PICS, sua organização no SUS e suas bases legais.
-                    </p>
-                </div>
-
-                <a href="#" class="unidade-card-botao">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
-                        <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
-                        <path d="M9 7h6" />
-                        <path d="M9 10h6" />
-                    </svg>
-                    Acessar
-                </a>
-            </article>
-
-            <article class="unidade-card">
-                <div class="unidade-card-imagem">
-                    <img src="./assets/images/Banner-PICS-para-ACS-e-ACE.png" alt="Imagem representativa da Unidade 2">
-                    <span class="unidade-card-categoria">Unidade 2</span>
-                </div>
-
-                <div class="unidade-card-conteudo">
-                    <h3>Práticas integradas à atuação dos ACS e ACE - Parte I</h3>
-                    <p>
-                        Explore práticas que dialogam com o cuidado em saúde no território.
-                    </p>
-                </div>
-
-                <a href="#" class="unidade-card-botao">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
-                        <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
-                        <path d="M9 7h6" />
-                        <path d="M9 10h6" />
-                    </svg>
-                    Acessar
-                </a>
-            </article>
-
-            <article class="unidade-card">
-                <div class="unidade-card-imagem">
-                    <img src="./assets/images/Banner-PICS-para-ACS-e-ACE.png" alt="Imagem representativa da Unidade 3">
-                    <span class="unidade-card-categoria">Unidade 3</span>
-                </div>
-
-                <div class="unidade-card-conteudo">
-                    <h3>Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
-                    <p>
-                        Aprofunde práticas integrativas e reflita sobre limites, segurança e responsabilidade.
-                    </p>
-                </div>
-
-                <a href="#" class="unidade-card-botao">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
-                        <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
-                        <path d="M9 7h6" />
-                        <path d="M9 10h6" />
-                    </svg>
-                    Acessar
-                </a>
-            </article>
-
-            <article class="unidade-card">
-                <div class="unidade-card-imagem">
-                    <img src="./assets/images/Banner-PICS-para-ACS-e-ACE.png" alt="Imagem representativa da Unidade 4">
-                    <span class="unidade-card-categoria">Unidade 4</span>
-                </div>
-
-                <div class="unidade-card-conteudo">
-                    <h3>Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
-                    <p>
-                        Consolide orientações éticas para a atuação segura dos ACS e ACE com as PICS.
-                    </p>
-                </div>
-
-                <a href="#" class="unidade-card-botao">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
-                        <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
-                        <path d="M9 7h6" />
-                        <path d="M9 10h6" />
-                    </svg>
-                    Acessar
-                </a>
-            </article>
-
-            <article class="unidade-card">
-                <div class="unidade-card-imagem">
-                    <img src="./assets/images/Banner-PICS-para-ACS-e-ACE.png" alt="Imagem representativa da Unidade 5">
-                    <span class="unidade-card-categoria">Unidade 5</span>
-                </div>
-
-                <div class="unidade-card-conteudo">
-                    <h3>Autoavaliação e Avaliação do módulo</h3>
-                    <p>
-                        Revise os aprendizados e realize a avaliação final do módulo.
-                    </p>
-                </div>
-
-                <a href="#" class="unidade-card-botao">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
-                        <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
-                        <path d="M9 7h6" />
-                        <path d="M9 10h6" />
-                    </svg>
-                    Acessar
-                </a>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="faq-modulo">
-        <div id="faq-modulo-cabecalho">
-            <span>Fique por dentro</span>
-            <h2>Informações sobre o Módulo</h2>
-        </div>
-        <div id="faq-modulo-container">
-
-            <article class="faq-item ativo">
-                <button class="faq-pergunta" type="button" aria-expanded="true">
-                    <span>Qual é o Objetivo do Módulo?</span>
-                    <span class="faq-icone" aria-hidden="true"></span>
-                </button>
-
-                <div class="faq-resposta">
-                    <div>
-                        <p>
-                            Qualificar Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE)
-                            para o uso seguro e responsável das PICS no território. Ao longo do módulo, você irá
-                            compreender conceitos, bases legais e aspectos éticos relacionados a práticas como plantas
-                            medicinais e fitoterapia, Medicina Tradicional Chinesa, Terapia Comunitária Integrativa
-                            (TCI), Yoga, Meditação e Automassagem, contribuindo para a promoção da saúde e o cuidado
-                            integral.
-                        </p>
+                    <div
+                        id="faq-resposta-1"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-1">
+                        <div>
+                            <p>
+                                Qualificar Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE)
+                                para o uso seguro e responsável das PICS no território. Ao longo do módulo, você irá
+                                compreender conceitos, bases legais e aspectos éticos relacionados a práticas como plantas
+                                medicinais e fitoterapia, Medicina Tradicional Chinesa, Terapia Comunitária Integrativa
+                                (TCI), Yoga, Meditação e Automassagem, contribuindo para a promoção da saúde e o cuidado
+                                integral.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="faq-item">
-                <button class="faq-pergunta" type="button" aria-expanded="false">
-                    <span>Quem é o Público Alvo?</span>
-                    <span class="faq-icone" aria-hidden="true"></span>
-                </button>
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-2"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-2">
+                            <span>Quem é o Público Alvo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
 
-                <div class="faq-resposta">
-                    <div>
-                        <p>
-                            Destina-se a ACS, ACE, usuários do SUS e demais interessados. O acesso é livre,
-                            sem limite de vagas, com o objetivo de ampliar o conhecimento sobre a temática.
-                        </p>
+                    <div
+                        id="faq-resposta-2"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-2"
+                        hidden>
+                        <div>
+                            <p>
+                                Destina-se a ACS, ACE, usuários do SUS e demais interessados. O acesso é livre,
+                                sem limite de vagas, com o objetivo de ampliar o conhecimento sobre a temática.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="faq-item">
-                <button class="faq-pergunta" type="button" aria-expanded="false">
-                    <span>Quais são os Recursos presentes neste Módulo?</span>
-                    <span class="faq-icone" aria-hidden="true"></span>
-                </button>
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-3"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-3">
+                            <span>Quais são os Recursos presentes neste Módulo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
 
-                <div class="faq-resposta">
-                    <div>
-                        <p>
-                            Slides, vídeos, histórias em quadrinhos, leituras complementares e atividades de
-                            múltipla escolha.
-                        </p>
+                    <div
+                        id="faq-resposta-3"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-3"
+                        hidden>
+                        <div>
+                            <p>
+                                Slides, vídeos, histórias em quadrinhos, leituras complementares e atividades de
+                                múltipla escolha.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="faq-item">
-                <button class="faq-pergunta" type="button" aria-expanded="false">
-                    <span>Como é feita a Avaliação?</span>
-                    <span class="faq-icone" aria-hidden="true"></span>
-                </button>
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-4"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-4">
+                            <span>Como é feita a Avaliação?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
 
-                <div class="faq-resposta">
-                    <div>
-                        <p>
-                            Você realizará dois questionários: um de avaliação do módulo e outro de autoavaliação,
-                            permitindo refletir sobre seu aprendizado e participação.
-                        </p>
+                    <div
+                        id="faq-resposta-4"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-4"
+                        hidden>
+                        <div>
+                            <p>
+                                Você realizará dois questionários: um de avaliação do módulo e outro de autoavaliação,
+                                permitindo refletir sobre seu aprendizado e participação.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="faq-item">
-                <button class="faq-pergunta" type="button" aria-expanded="false">
-                    <span>Como é o processo de Certificação?</span>
-                    <span class="faq-icone" aria-hidden="true"></span>
-                </button>
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-5"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-5">
+                            <span>Como é o processo de Certificação?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
 
-                <div class="faq-resposta">
-                    <div>
-                        <p>
-                            Para obter o certificado, é necessário: concluir 100% das atividades, responder à
-                            avaliação de qualidade do módulo e alcançar, no mínimo, 70% de aproveitamento nas
-                            atividades avaliativas.
-                        </p>
+                    <div
+                        id="faq-resposta-5"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-5"
+                        hidden>
+                        <div>
+                            <p>
+                                Para obter o certificado, é necessário: concluir 100% das atividades, responder à
+                                avaliação de qualidade do módulo e alcançar, no mínimo, 70% de aproveitamento nas
+                                atividades avaliativas.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <footer id="rodape-modulo">
         <div id="rodape-modulo-container">
-            <img src="./assets/images/instituicoes-envolvidas-logo-rodape.png" alt="Logos das instituições envolvidas">
+            <img
+                src="./assets/images/instituicoes-envolvidas-logo-rodape.png"
+                alt="Logotipos das instituições envolvidas no módulo">
         </div>
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const usuarioPrefereMenosAnimacao = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        document.addEventListener('DOMContentLoaded', () => {
+            const usuarioPrefereMenosAnimacao = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        /* =========================================================
-           ESTILOS DAS ANIMAÇÕES
-        ========================================================= */
+            const estilosAnimacoes = document.createElement('style');
 
-        const estilosAnimacoes = document.createElement('style');
+            estilosAnimacoes.textContent = `
+                .js-reveal {
+                    opacity: 0;
+                    transform: translateY(26px);
+                    transition:
+                        opacity 0.65s ease,
+                        transform 0.65s ease;
+                }
 
-        estilosAnimacoes.textContent = `
-            .js-reveal {
-                opacity: 0;
-                transform: translateY(26px);
-                transition:
-                    opacity 0.65s ease,
-                    transform 0.65s ease;
-            }
-
-            .js-reveal.visivel {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .js-delay-1 {
-                transition-delay: 0.08s;
-            }
-
-            .js-delay-2 {
-                transition-delay: 0.16s;
-            }
-
-            .js-delay-3 {
-                transition-delay: 0.24s;
-            }
-
-            .js-delay-4 {
-                transition-delay: 0.32s;
-            }
-
-            .js-barra-progresso {
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 9999;
-                width: 0%;
-                height: 4px;
-                background: linear-gradient(90deg, #6f8057, #dbbf7f);
-                box-shadow: 0 4px 14px rgba(111, 128, 87, 0.25);
-                transition: width 0.08s linear;
-            }
-
-            #banner-modulo-logo {
-                animation: logoFlutuando 4s ease-in-out infinite;
-            }
-
-            @keyframes logoFlutuando {
-                0%, 100% {
+                .js-reveal.visivel {
+                    opacity: 1;
                     transform: translateY(0);
                 }
 
-                50% {
-                    transform: translateY(-7px);
-                }
-            }
-
-            .banner-info-card,
-            .unidade-card,
-            #forum-pratica-card,
-            .faq-item {
-                transition:
-                    transform 0.28s ease,
-                    box-shadow 0.28s ease,
-                    border-color 0.28s ease;
-            }
-
-            .banner-info-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 18px 40px rgba(31, 45, 31, 0.14);
-                border-color: rgba(219, 191, 127, 0.5);
-            }
-
-            #forum-pratica-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 30px 70px rgba(31, 45, 31, 0.16);
-            }
-
-            .unidade-card:hover {
-                transform: translateY(-7px);
-                box-shadow: 0 26px 62px rgba(31, 45, 31, 0.18);
-            }
-
-            .faq-item:hover {
-                transform: translateX(4px);
-            }
-
-            .faq-item.ativo {
-                box-shadow: 0 28px 70px rgba(31, 45, 31, 0.13);
-            }
-
-            .unidade-card-botao,
-            #forum-pratica-botao {
-                position: relative;
-                overflow: hidden;
-            }
-
-            .efeito-ripple {
-                position: absolute;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                pointer-events: none;
-                background-color: rgba(255, 255, 255, 0.5);
-                transform: translate(-50%, -50%) scale(0);
-                animation: rippleBotao 0.55s ease-out forwards;
-            }
-
-            @keyframes rippleBotao {
-                to {
-                    opacity: 0;
-                    transform: translate(-50%, -50%) scale(18);
-                }
-            }
-
-            .js-contador-pulso {
-                animation: contadorPulso 0.45s ease;
-            }
-
-            @keyframes contadorPulso {
-                0% {
-                    transform: scale(1);
+                .js-delay-1 {
+                    transition-delay: 0.08s;
                 }
 
-                45% {
-                    transform: scale(1.05);
+                .js-delay-2 {
+                    transition-delay: 0.16s;
                 }
 
-                100% {
-                    transform: scale(1);
+                .js-delay-3 {
+                    transition-delay: 0.24s;
                 }
-            }
 
-            @media (max-width: 768px) {
-                .unidade-card:hover,
-                .banner-info-card:hover,
-                #forum-pratica-card:hover,
-                .faq-item:hover {
-                    transform: none;
+                .js-delay-4 {
+                    transition-delay: 0.32s;
                 }
-            }
 
-            @media (prefers-reduced-motion: reduce) {
-                .js-reveal,
-                .js-reveal.visivel,
-                #banner-modulo-logo,
+                .js-barra-progresso {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 9999;
+                    width: 0%;
+                    height: 4px;
+                    background: linear-gradient(90deg, #4f633d, #735f20);
+                    box-shadow: 0 4px 14px rgba(31, 45, 31, 0.25);
+                    transition: width 0.08s linear;
+                }
+
+                #banner-modulo-logo {
+                    animation: logoFlutuando 4s ease-in-out infinite;
+                }
+
+                @keyframes logoFlutuando {
+                    0%, 100% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: translateY(-7px);
+                    }
+                }
+
                 .banner-info-card,
                 .unidade-card,
                 #forum-pratica-card,
                 .faq-item {
-                    opacity: 1 !important;
-                    transform: none !important;
-                    transition: none !important;
-                    animation: none !important;
+                    transition:
+                        transform 0.28s ease,
+                        box-shadow 0.28s ease,
+                        border-color 0.28s ease;
                 }
+
+                .banner-info-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 18px 40px rgba(31, 45, 31, 0.14);
+                    border-color: rgba(115, 95, 32, 0.5);
+                }
+
+                #forum-pratica-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 30px 70px rgba(31, 45, 31, 0.16);
+                }
+
+                .unidade-card:hover {
+                    transform: translateY(-7px);
+                    box-shadow: 0 26px 62px rgba(31, 45, 31, 0.18);
+                }
+
+                .faq-item:hover {
+                    transform: translateX(4px);
+                }
+
+                .faq-item.ativo {
+                    box-shadow: 0 28px 70px rgba(31, 45, 31, 0.13);
+                }
+
+                .unidade-card-botao,
+                #forum-pratica-botao {
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .efeito-ripple {
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    transform: translate(-50%, -50%) scale(0);
+                    animation: rippleBotao 0.55s ease-out forwards;
+                }
+
+                @keyframes rippleBotao {
+                    to {
+                        opacity: 0;
+                        transform: translate(-50%, -50%) scale(18);
+                    }
+                }
+
+                .js-contador-pulso {
+                    animation: contadorPulso 0.45s ease;
+                }
+
+                @keyframes contadorPulso {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    45% {
+                        transform: scale(1.05);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .unidade-card:hover,
+                    .banner-info-card:hover,
+                    #forum-pratica-card:hover,
+                    .faq-item:hover {
+                        transform: none;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .js-reveal,
+                    .js-reveal.visivel,
+                    #banner-modulo-logo,
+                    .banner-info-card,
+                    .unidade-card,
+                    #forum-pratica-card,
+                    .faq-item,
+                    .js-barra-progresso,
+                    .js-contador-pulso {
+                        opacity: 1 !important;
+                        transform: none !important;
+                        transition: none !important;
+                        animation: none !important;
+                    }
+                }
+            `;
+
+            document.head.appendChild(estilosAnimacoes);
+
+            const barraProgresso = document.createElement('div');
+            barraProgresso.className = 'js-barra-progresso';
+            barraProgresso.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(barraProgresso);
+
+            const atualizarBarraProgresso = () => {
+                const alturaPagina = document.documentElement.scrollHeight - window.innerHeight;
+                const progresso = alturaPagina > 0 ? (window.scrollY / alturaPagina) * 100 : 0;
+
+                barraProgresso.style.width = `${progresso}%`;
+            };
+
+            window.addEventListener('scroll', atualizarBarraProgresso, { passive: true });
+            atualizarBarraProgresso();
+
+            const elementosParaAnimar = document.querySelectorAll(`
+                #banner-modulo-box-textual,
+                .banner-info-card,
+                #forum-pratica-card,
+                #unidades-modulo-cabecalho,
+                .unidade-card,
+                #faq-modulo-cabecalho,
+                .faq-item
+            `);
+
+            elementosParaAnimar.forEach((elemento, index) => {
+                elemento.classList.add('js-reveal');
+
+                if (
+                    elemento.classList.contains('banner-info-card') ||
+                    elemento.classList.contains('unidade-card') ||
+                    elemento.classList.contains('faq-item')
+                ) {
+                    elemento.classList.add(`js-delay-${(index % 4) + 1}`);
+                }
+            });
+
+            if (usuarioPrefereMenosAnimacao) {
+                elementosParaAnimar.forEach((elemento) => {
+                    elemento.classList.add('visivel');
+                });
+            } else if ('IntersectionObserver' in window) {
+                const observadorEntrada = new IntersectionObserver((entradas) => {
+                    entradas.forEach((entrada) => {
+                        if (entrada.isIntersecting) {
+                            entrada.target.classList.add('visivel');
+                            observadorEntrada.unobserve(entrada.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                elementosParaAnimar.forEach((elemento) => {
+                    observadorEntrada.observe(elemento);
+                });
+            } else {
+                elementosParaAnimar.forEach((elemento) => {
+                    elemento.classList.add('visivel');
+                });
             }
-        `;
 
-        document.head.appendChild(estilosAnimacoes);
+            setTimeout(() => {
+                elementosParaAnimar.forEach((elemento) => {
+                    elemento.classList.add('visivel');
+                });
+            }, 1400);
 
+            const blocoInformacoes = document.querySelector('#banner-informacoes-modulo');
+            let contadoresJaRodaram = false;
 
-        /* =========================================================
-           BARRA DE PROGRESSO DE LEITURA
-        ========================================================= */
+            const animarContadores = () => {
+                if (contadoresJaRodaram || usuarioPrefereMenosAnimacao) return;
 
-        const barraProgresso = document.createElement('div');
-        barraProgresso.className = 'js-barra-progresso';
-        document.body.appendChild(barraProgresso);
+                contadoresJaRodaram = true;
 
-        const atualizarBarraProgresso = () => {
-            const alturaPagina = document.documentElement.scrollHeight - window.innerHeight;
-            const progresso = alturaPagina > 0 ? (window.scrollY / alturaPagina) * 100 : 0;
+                const textosAnimaveis = Array.from(document.querySelectorAll('.banner-info-conteudo p')).filter((texto) => {
+                    const conteudo = texto.textContent.trim().toLowerCase();
 
-            barraProgresso.style.width = `${progresso}%`;
-        };
+                    return conteudo === '20 horas' || conteudo === '5 unidades';
+                });
 
-        window.addEventListener('scroll', atualizarBarraProgresso, { passive: true });
-        atualizarBarraProgresso();
+                textosAnimaveis.forEach((texto) => {
+                    const conteudoOriginal = texto.textContent.trim();
+                    const numeroEncontrado = conteudoOriginal.match(/\d+/);
 
+                    if (!numeroEncontrado) return;
 
-        /* =========================================================
-           ANIMAÇÃO DE ENTRADA DOS ELEMENTOS
-        ========================================================= */
+                    const numeroFinal = Number(numeroEncontrado[0]);
+                    const duracao = 850;
+                    const inicio = performance.now();
 
-        const elementosParaAnimar = document.querySelectorAll(`
-            #banner-modulo-box-textual,
-            .banner-info-card,
-            #forum-pratica-card,
-            #unidades-modulo-cabecalho,
-            .unidade-card,
-            #faq-modulo-cabecalho,
-            .faq-item
-        `);
+                    texto.classList.add('js-contador-pulso');
 
-        elementosParaAnimar.forEach((elemento, index) => {
-            elemento.classList.add('js-reveal');
+                    const animar = (tempoAtual) => {
+                        const progresso = Math.min((tempoAtual - inicio) / duracao, 1);
+                        const valorAtual = Math.floor(progresso * numeroFinal);
 
-            if (
-                elemento.classList.contains('banner-info-card') ||
-                elemento.classList.contains('unidade-card') ||
-                elemento.classList.contains('faq-item')
-            ) {
-                elemento.classList.add(`js-delay-${(index % 4) + 1}`);
+                        texto.textContent = conteudoOriginal.replace(numeroEncontrado[0], valorAtual);
+
+                        if (progresso < 1) {
+                            requestAnimationFrame(animar);
+                        } else {
+                            texto.textContent = conteudoOriginal;
+
+                            setTimeout(() => {
+                                texto.classList.remove('js-contador-pulso');
+                            }, 450);
+                        }
+                    };
+
+                    requestAnimationFrame(animar);
+                });
+            };
+
+            if (blocoInformacoes && !usuarioPrefereMenosAnimacao && 'IntersectionObserver' in window) {
+                const observadorContadores = new IntersectionObserver((entradas) => {
+                    entradas.forEach((entrada) => {
+                        if (entrada.isIntersecting) {
+                            animarContadores();
+                            observadorContadores.unobserve(entrada.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.3
+                });
+
+                observadorContadores.observe(blocoInformacoes);
+            } else if (blocoInformacoes && !usuarioPrefereMenosAnimacao) {
+                animarContadores();
+            }
+
+            const botoes = document.querySelectorAll('.unidade-card-botao, #forum-pratica-botao');
+
+            botoes.forEach((botao) => {
+                botao.addEventListener('click', (evento) => {
+                    if (usuarioPrefereMenosAnimacao) return;
+
+                    const rippleAntigo = botao.querySelector('.efeito-ripple');
+
+                    if (rippleAntigo) {
+                        rippleAntigo.remove();
+                    }
+
+                    const area = botao.getBoundingClientRect();
+                    const ripple = document.createElement('span');
+
+                    ripple.className = 'efeito-ripple';
+                    ripple.setAttribute('aria-hidden', 'true');
+                    ripple.style.left = `${evento.clientX - area.left}px`;
+                    ripple.style.top = `${evento.clientY - area.top}px`;
+
+                    botao.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            const fecharFaq = (item) => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                const resposta = item.querySelector('.faq-resposta');
+
+                item.classList.remove('ativo');
+                pergunta.setAttribute('aria-expanded', 'false');
+                resposta.hidden = true;
+            };
+
+            const abrirFaq = (item) => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                const resposta = item.querySelector('.faq-resposta');
+
+                item.classList.add('ativo');
+                pergunta.setAttribute('aria-expanded', 'true');
+                resposta.hidden = false;
+            };
+
+            faqItems.forEach((item) => {
+                const pergunta = item.querySelector('.faq-pergunta');
+
+                pergunta.addEventListener('click', () => {
+                    const itemEstaAberto = item.classList.contains('ativo');
+
+                    faqItems.forEach((faq) => {
+                        fecharFaq(faq);
+                    });
+
+                    if (!itemEstaAberto) {
+                        abrirFaq(item);
+                    }
+                });
+            });
+
+            const logo = document.querySelector('#banner-modulo-logo');
+
+            if (logo && !usuarioPrefereMenosAnimacao) {
+                logo.addEventListener('mouseenter', () => {
+                    logo.animate(
+                        [
+                            { transform: 'scale(1)' },
+                            { transform: 'scale(1.04)' },
+                            { transform: 'scale(1)' }
+                        ],
+                        {
+                            duration: 450,
+                            easing: 'ease-out'
+                        }
+                    );
+                });
             }
         });
-
-        if (usuarioPrefereMenosAnimacao) {
-            elementosParaAnimar.forEach((elemento) => {
-                elemento.classList.add('visivel');
-            });
-        } else if ('IntersectionObserver' in window) {
-            const observadorEntrada = new IntersectionObserver((entradas) => {
-                entradas.forEach((entrada) => {
-                    if (entrada.isIntersecting) {
-                        entrada.target.classList.add('visivel');
-                        observadorEntrada.unobserve(entrada.target);
-                    }
-                });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            elementosParaAnimar.forEach((elemento) => {
-                observadorEntrada.observe(elemento);
-            });
-        } else {
-            elementosParaAnimar.forEach((elemento) => {
-                elemento.classList.add('visivel');
-            });
-        }
-
-        setTimeout(() => {
-            elementosParaAnimar.forEach((elemento) => {
-                elemento.classList.add('visivel');
-            });
-        }, 1400);
-
-
-        /* =========================================================
-           CONTADOR ANIMADO NOS CARDS DE INFORMAÇÃO
-        ========================================================= */
-
-        const blocoInformacoes = document.querySelector('#banner-informacoes-modulo');
-        let contadoresJaRodaram = false;
-
-        const animarContadores = () => {
-            if (contadoresJaRodaram) return;
-
-            contadoresJaRodaram = true;
-
-            const textos = document.querySelectorAll('.banner-info-conteudo p');
-
-            textos.forEach((texto) => {
-                const conteudoOriginal = texto.textContent.trim();
-                const numeroEncontrado = conteudoOriginal.match(/\d+/);
-
-                if (!numeroEncontrado) return;
-
-                const numeroFinal = Number(numeroEncontrado[0]);
-                const duracao = 800;
-                const inicio = performance.now();
-
-                texto.classList.add('js-contador-pulso');
-
-                const animar = (tempoAtual) => {
-                    const progresso = Math.min((tempoAtual - inicio) / duracao, 1);
-                    const valorAtual = Math.floor(progresso * numeroFinal);
-
-                    texto.textContent = conteudoOriginal.replace(numeroEncontrado[0], valorAtual);
-
-                    if (progresso < 1) {
-                        requestAnimationFrame(animar);
-                    } else {
-                        texto.textContent = conteudoOriginal;
-
-                        setTimeout(() => {
-                            texto.classList.remove('js-contador-pulso');
-                        }, 450);
-                    }
-                };
-
-                requestAnimationFrame(animar);
-            });
-        };
-
-        if (blocoInformacoes && !usuarioPrefereMenosAnimacao && 'IntersectionObserver' in window) {
-            const observadorContadores = new IntersectionObserver((entradas) => {
-                entradas.forEach((entrada) => {
-                    if (entrada.isIntersecting) {
-                        animarContadores();
-                        observadorContadores.unobserve(entrada.target);
-                    }
-                });
-            }, {
-                threshold: 0.3
-            });
-
-            observadorContadores.observe(blocoInformacoes);
-        }
-
-
-        /* =========================================================
-           EFEITO RIPPLE NOS BOTÕES
-        ========================================================= */
-
-        const botoes = document.querySelectorAll('.unidade-card-botao, #forum-pratica-botao');
-
-        botoes.forEach((botao) => {
-            botao.addEventListener('click', (evento) => {
-                const href = botao.getAttribute('href');
-
-                if (href === '#') {
-                    evento.preventDefault();
-                }
-
-                const rippleAntigo = botao.querySelector('.efeito-ripple');
-
-                if (rippleAntigo) {
-                    rippleAntigo.remove();
-                }
-
-                const area = botao.getBoundingClientRect();
-                const ripple = document.createElement('span');
-
-                ripple.className = 'efeito-ripple';
-                ripple.style.left = `${evento.clientX - area.left}px`;
-                ripple.style.top = `${evento.clientY - area.top}px`;
-
-                botao.appendChild(ripple);
-
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-
-        /* =========================================================
-           FAQ INTERATIVO
-        ========================================================= */
-
-        const faqItems = document.querySelectorAll('.faq-item');
-
-        faqItems.forEach((item) => {
-            const pergunta = item.querySelector('.faq-pergunta');
-
-            pergunta.addEventListener('click', () => {
-                const itemEstaAberto = item.classList.contains('ativo');
-
-                faqItems.forEach((faq) => {
-                    faq.classList.remove('ativo');
-                    faq.querySelector('.faq-pergunta').setAttribute('aria-expanded', 'false');
-                });
-
-                if (!itemEstaAberto) {
-                    item.classList.add('ativo');
-                    pergunta.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-
-
-        /* =========================================================
-           MICROINTERAÇÃO NO LOGO
-        ========================================================= */
-
-        const logo = document.querySelector('#banner-modulo-logo');
-
-        if (logo && !usuarioPrefereMenosAnimacao) {
-            logo.addEventListener('mouseenter', () => {
-                logo.animate(
-                    [
-                        { transform: 'scale(1)' },
-                        { transform: 'scale(1.04)' },
-                        { transform: 'scale(1)' }
-                    ],
-                    {
-                        duration: 450,
-                        easing: 'ease-out'
-                    }
-                );
-            });
-        }
-    });
-</script>
+    </script>
 </body>
 
 </html>
