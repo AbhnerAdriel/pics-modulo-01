@@ -1,0 +1,1652 @@
+/* ----- Fontes do Projeto ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Rawline:wght@300;400;500;700;900&display=swap');
+
+
+/* ----- Variáveis Globais ----- */
+
+:root {
+    --fonte-principal: 'Montserrat', Arial, Helvetica, sans-serif;
+    --fonte-auxiliar: 'Rawline', 'Montserrat', Arial, Helvetica, sans-serif;
+
+    --border-radius-banner-modulo: 100px;
+
+    --banner-info-curso-cor-fundo: #ffffff;
+    --banner-info-curso-cor-fundo-pagina: #f7f9f1;
+    --banner-info-curso-cor-titulo: #1f2d1f;
+    --banner-info-curso-cor-texto: #4b5a4b;
+    --banner-info-curso-cor-numero: #dbbf7f;
+    --banner-info-curso-cor-borda: #e1e6d8;
+    --banner-info-curso-sombra: 0 18px 45px rgba(0, 0, 0, 0.12);
+
+    --forum-pratica-cor-fundo: #ffffff;
+    --forum-pratica-cor-titulo: #263326;
+    --forum-pratica-cor-texto: #4f5c4f;
+    --forum-pratica-cor-destaque: #dbbf7f;
+    --forum-pratica-cor-botao: #6f8057;
+    --forum-pratica-cor-botao-hover: #5d7048;
+    --forum-pratica-cor-borda: #e1e6d8;
+    --forum-pratica-sombra: 0 24px 60px rgba(31, 45, 31, 0.11);
+
+    --unidade-card-cor-fundo: #ffffff;
+    --unidade-card-cor-titulo: #263326;
+    --unidade-card-cor-texto: #4f5c4f;
+    --unidade-card-cor-categoria: #5b6557;
+    --unidade-card-cor-botao: #6f8057;
+    --unidade-card-cor-botao-hover: #5d7048;
+    --unidade-card-sombra: 0 18px 48px rgba(31, 45, 31, 0.12);
+
+    --faq-modulo-cor-fundo-card: #ffffff;
+    --faq-modulo-cor-titulo: #020b12;
+    --faq-modulo-cor-texto: #3f4b55;
+    --faq-modulo-cor-icone: #dbbf7f;
+    --faq-modulo-sombra: 0 24px 60px rgba(31, 45, 31, 0.09);
+
+    --secoes-cabecalho-titulo: #dbbf7f;
+}
+
+
+/* ----- Configurações Gerais ----- */
+
+body {
+    font-family: var(--fonte-principal);
+
+    background-color: var(--banner-info-curso-cor-fundo-pagina);
+    color: var(--banner-info-curso-cor-titulo);
+
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+button,
+.banner-info-numero,
+.unidade-card-categoria,
+.unidade-card-botao,
+#forum-pratica-tag,
+#forum-pratica-botao,
+#unidades-modulo-cabecalho span,
+#faq-modulo-cabecalho span {
+    font-family: var(--fonte-auxiliar);
+}
+
+
+/* ----- Classes Especiais ----- */
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+
+/* ----- Estilos Específicos do Banner do Módulo ----- */
+
+#banner-modulo {
+    width: 100%;
+    height: 650px;
+
+    position: relative;
+
+    background-image: url('./../images/Banner-PICS-para-ACS-e-ACE.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    border-bottom-right-radius: var(--border-radius-banner-modulo);
+    border-bottom-left-radius: var(--border-radius-banner-modulo);
+}
+
+#banner-modulo .dark-overlay {
+    z-index: 1;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    border-bottom-right-radius: var(--border-radius-banner-modulo);
+    border-bottom-left-radius: var(--border-radius-banner-modulo);
+}
+
+#banner-modulo-box-textual {
+    width: min(90%, 1100px);
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    padding: 20px;
+
+    color: #ffffff;
+    text-align: center;
+}
+
+#banner-modulo-logo {
+    width: clamp(120px, 16vw, 210px);
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 24px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35));
+}
+
+#banner-modulo-box-textual #banner-modulo-titulo {
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(16px, 28px, 32px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+#banner-modulo-box-textual #banner-modulo-titulo::after {
+    content: '';
+
+    display: block;
+    width: 160px;
+    height: 4px;
+
+    margin: 16px auto 0;
+
+    background-color: #ffffff;
+}
+
+
+/* ----- Caixa de Informações Gerais do Curso no Banner ----- */
+
+#banner-informacoes-modulo {
+    width: min(74%, 1180px);
+
+    position: relative;
+    z-index: 3;
+
+    margin: -85px auto 0;
+
+    overflow: hidden;
+
+    background-color: var(--banner-info-curso-cor-fundo);
+
+    border: 1px solid var(--banner-info-curso-cor-borda);
+    border-radius: 22px;
+
+    box-shadow: var(--banner-info-curso-sombra);
+}
+
+#banner-informacoes-modulo-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.banner-info-card {
+    min-height: 170px;
+
+    padding: 30px 28px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: var(--banner-info-curso-cor-fundo);
+
+    border-right: 1px solid var(--banner-info-curso-cor-borda);
+}
+
+.banner-info-card:last-child {
+    border-right: none;
+}
+
+.banner-info-numero {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: clamp(34px, 3vw, 44px);
+    line-height: 1;
+    font-weight: 800;
+
+    color: var(--banner-info-curso-cor-numero);
+}
+
+.banner-info-card h2 {
+    margin-bottom: 10px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(17px, 1.25vw, 22px);
+    line-height: 1.2;
+    font-weight: 800;
+
+    color: var(--banner-info-curso-cor-titulo);
+}
+
+.banner-info-card p {
+    max-width: 255px;
+
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 700;
+
+    color: var(--banner-info-curso-cor-texto);
+}
+
+
+/* ----- Seção Fórum Dialogando com a Prática ----- */
+
+#forum-pratica {
+    width: min(84%, 1300px);
+
+    margin: 78px auto 72px;
+}
+
+#forum-pratica-card {
+    min-height: 390px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background-color: var(--forum-pratica-cor-fundo);
+
+    border: 1px solid var(--forum-pratica-cor-borda);
+    border-radius: 34px;
+
+    box-shadow: var(--forum-pratica-sombra);
+}
+
+#forum-pratica-card::before {
+    content: '';
+
+    width: 210px;
+    height: 210px;
+
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    z-index: 1;
+
+    background-color: rgba(219, 191, 127, 0.16);
+
+    border-radius: 50%;
+}
+
+#forum-pratica-conteudo {
+    position: relative;
+    z-index: 2;
+
+    padding: 54px 58px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#forum-pratica-tag {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    padding: 10px 16px;
+
+    background-color: rgba(219, 191, 127, 0.16);
+    color: var(--forum-pratica-cor-botao);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#forum-pratica-titulo {
+    max-width: 620px;
+
+    margin-bottom: 20px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(30px, 3.7vw, 48px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+
+    color: var(--forum-pratica-cor-destaque);
+}
+
+#forum-pratica-conteudo p {
+    max-width: 720px;
+
+    margin-bottom: 32px;
+
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 400;
+
+    color: var(--forum-pratica-cor-texto);
+}
+
+#forum-pratica-botao {
+    min-height: 60px;
+
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--forum-pratica-cor-botao);
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#forum-pratica-botao span {
+    font-size: 22px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+#forum-pratica-botao:hover {
+    background-color: var(--forum-pratica-cor-botao-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 14px 28px rgba(111, 128, 87, 0.24);
+}
+
+#forum-pratica-botao:hover span {
+    transform: translateX(4px);
+}
+
+#forum-pratica-imagem {
+    min-height: 300px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#forum-pratica-imagem::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+}
+
+#forum-pratica-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(0.6);
+
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+#forum-pratica-card:hover #forum-pratica-imagem img {
+    transform: scale(0.8);
+
+    filter: brightness(1.03) contrast(1.02);
+}
+
+
+/* ----- Seção de Unidades do Módulo ----- */
+
+#unidades-modulo {
+    width: min(84%, 1300px);
+
+    margin: 0 auto 82px;
+}
+
+#unidades-modulo-cabecalho {
+    max-width: 800px;
+
+    margin-bottom: 44px;
+}
+
+#unidades-modulo-cabecalho span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--unidade-card-cor-botao);
+}
+
+#unidades-modulo-cabecalho h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+
+    color: var(--secoes-cabecalho-titulo);
+}
+
+#unidades-modulo-cabecalho p {
+    max-width: 100%;
+
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    line-height: 1.52;
+    font-weight: 400;
+
+    color: var(--banner-info-curso-cor-texto);
+}
+
+#unidades-modulo-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    gap: 24px;
+}
+
+.unidade-card {
+    min-height: 590px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: var(--unidade-card-cor-fundo);
+
+    border-radius: 38px;
+
+    box-shadow: var(--unidade-card-sombra);
+}
+
+.unidade-card-imagem {
+    height: 315px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 23px;
+}
+
+.unidade-card-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: grayscale(100%) brightness(0.96) contrast(0.95);
+    transform: scale(1);
+
+    transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.unidade-card:hover .unidade-card-imagem img {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    transform: scale(1.045);
+}
+
+.unidade-card-categoria {
+    min-width: 185px;
+    height: 52px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    padding: 0 24px 0 32px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--unidade-card-cor-fundo);
+    color: var(--unidade-card-cor-categoria);
+
+    border-bottom-right-radius: 16px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.unidade-card-categoria::after {
+    content: '';
+
+    width: 27px;
+    height: 27px;
+
+    position: absolute;
+    top: 0;
+    right: -27px;
+
+    border-top-left-radius: 20px;
+
+    box-shadow: -10px -10px 0 9px var(--unidade-card-cor-fundo);
+}
+
+.unidade-card-categoria::before {
+    content: '';
+
+    width: 27px;
+    height: 27px;
+
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+
+    border-top-left-radius: 20px;
+
+    box-shadow: -10px -10px 0 9px var(--unidade-card-cor-fundo);
+}
+
+.unidade-card-conteudo {
+    padding: 20px 2px 0;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.unidade-card-conteudo h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(23px, 1.75vw, 29px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+
+    color: var(--unidade-card-cor-titulo);
+}
+
+.unidade-card-conteudo p {
+    margin-bottom: 28px;
+
+    font-family: var(--fonte-principal);
+    font-size: 17px;
+    line-height: 1.42;
+    font-weight: 400;
+
+    color: var(--unidade-card-cor-texto);
+}
+
+.unidade-card-botao {
+    width: 100%;
+    min-height: 68px;
+
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    background-color: var(--unidade-card-cor-botao);
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.unidade-card-botao svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.unidade-card-botao:hover {
+    background-color: var(--unidade-card-cor-botao-hover);
+    transform: translateY(-2px);
+}
+
+
+/* ----- Seção FAQ do Módulo ----- */
+
+#faq-modulo {
+    width: min(84%, 1300px);
+
+    margin: 0 auto 90px;
+}
+
+#faq-modulo-cabecalho {
+    max-width: 800px;
+
+    margin-bottom: 44px;
+}
+
+#faq-modulo-cabecalho span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--unidade-card-cor-botao);
+}
+
+#faq-modulo-cabecalho h2 {
+    margin-bottom: 12px;
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+
+    color: var(--secoes-cabecalho-titulo);
+}
+
+#faq-modulo-cabecalho p {
+    max-width: 100%;
+
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    line-height: 1.52;
+    font-weight: 400;
+
+    color: var(--banner-info-curso-cor-texto);
+}
+
+#faq-modulo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.faq-item {
+    overflow: hidden;
+
+    background-color: var(--faq-modulo-cor-fundo-card);
+
+    border-radius: 22px;
+
+    box-shadow: var(--faq-modulo-sombra);
+}
+
+.faq-pergunta {
+    width: 100%;
+    min-height: 98px;
+
+    padding: 28px 34px 28px 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    cursor: pointer;
+
+    background-color: transparent;
+    color: var(--faq-modulo-cor-titulo);
+
+    border: none;
+
+    text-align: left;
+    font-family: var(--fonte-auxiliar);
+}
+
+.faq-pergunta span:first-child {
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.faq-icone {
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+
+    flex: 0 0 22px;
+}
+
+.faq-icone::before,
+.faq-icone::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 17px;
+    height: 4px;
+
+    background-color: var(--faq-modulo-cor-icone);
+
+    border-radius: 999px;
+
+    transform: translate(-50%, -50%);
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-icone::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.ativo .faq-icone::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-resposta {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.35s ease;
+}
+
+.faq-resposta>div {
+    overflow: hidden;
+}
+
+.faq-item.ativo .faq-resposta {
+    grid-template-rows: 1fr;
+}
+
+.faq-resposta p {
+    padding: 0 36px 36px;
+
+    max-width: 1120px;
+
+    font-family: var(--fonte-principal);
+    font-size: clamp(17px, 1.6vw, 24px);
+    line-height: 1.6;
+    font-weight: 400;
+
+    color: var(--faq-modulo-cor-texto);
+}
+
+
+/* ----- Rodapé do Módulo ----- */
+
+#rodape-modulo {
+    width: 100%;
+
+    padding: 54px 20px;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid var(--banner-info-curso-cor-borda);
+
+    border-top-right-radius: calc(var(--border-radius-banner-modulo) - 20px);
+    border-top-left-radius: calc(var(--border-radius-banner-modulo) - 20px);
+}
+
+#rodape-modulo-container {
+    width: min(84%, 1300px);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rodape-modulo img {
+    width: min(100%, 720px);
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ----- Responsividade ----- */
+
+@media (max-width: 1200px) {
+    #banner-informacoes-modulo {
+        width: 84%;
+        margin-top: -75px;
+    }
+
+    #banner-informacoes-modulo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-info-card {
+        min-height: 155px;
+
+        padding: 28px 28px 26px;
+    }
+
+    .banner-info-card:nth-child(1),
+    .banner-info-card:nth-child(2) {
+        border-bottom: 1px solid var(--banner-info-curso-cor-borda);
+    }
+
+    .banner-info-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .banner-info-card p {
+        max-width: 100%;
+    }
+
+    #forum-pratica {
+        width: 82%;
+
+        margin: 68px auto 64px;
+    }
+
+    #forum-pratica-card {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    }
+
+    #forum-pratica-conteudo {
+        padding: 46px 44px;
+    }
+
+    #forum-pratica-conteudo p {
+        font-size: 17px;
+    }
+
+    #unidades-modulo {
+        width: 82%;
+    }
+
+    #unidades-modulo-lista {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 22px;
+    }
+
+    .unidade-card {
+        min-height: 560px;
+
+        padding: 19px;
+
+        border-radius: 35px;
+    }
+
+    .unidade-card-imagem {
+        height: 295px;
+
+        border-radius: 22px;
+    }
+
+    .unidade-card-categoria {
+        min-width: 172px;
+        height: 50px;
+
+        padding-left: 28px;
+
+        font-size: 17px;
+    }
+
+    .unidade-card-conteudo h3 {
+        font-size: clamp(22px, 2vw, 27px);
+    }
+
+    .unidade-card-conteudo p {
+        margin-bottom: 26px;
+
+        font-size: 16.5px;
+    }
+
+    .unidade-card-botao {
+        min-height: 64px;
+
+        margin-top: auto;
+
+        font-size: 19px;
+    }
+
+    .unidade-card-botao svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    #faq-modulo {
+        width: 82%;
+    }
+}
+
+
+/* ----- Mobile e Tablets Pequenos ----- */
+
+@media (max-width: 768px) {
+    :root {
+        --border-radius-banner-modulo: 38px;
+    }
+
+    #banner-modulo {
+        height: 500px;
+
+        background-position: center;
+    }
+
+    #banner-modulo-box-textual {
+        width: min(90%, 620px);
+
+        top: 50%;
+
+        padding: 16px;
+    }
+
+    #banner-modulo-logo {
+        width: clamp(95px, 24vw, 150px);
+
+        margin-bottom: 20px;
+    }
+
+    #banner-modulo-box-textual #banner-modulo-titulo {
+        font-size: clamp(23px, 5.8vw, 34px);
+        line-height: 1.18;
+        letter-spacing: -0.4px;
+    }
+
+    #banner-modulo-box-textual #banner-modulo-titulo::after {
+        width: 72px;
+        height: 3px;
+
+        margin-top: 18px;
+    }
+
+    #banner-informacoes-modulo {
+        width: min(90%, 560px);
+
+        margin: 28px auto 0;
+
+        overflow: visible;
+
+        background-color: transparent;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+    #banner-informacoes-modulo-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .banner-info-card {
+        min-height: auto;
+
+        padding: 18px;
+
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        align-items: center;
+        gap: 14px;
+
+        border: 1px solid var(--banner-info-curso-cor-borda);
+        border-radius: 18px;
+
+        box-shadow: 0 12px 30px rgba(31, 45, 31, 0.08);
+    }
+
+    .banner-info-card:nth-child(1),
+    .banner-info-card:nth-child(2),
+    .banner-info-card:nth-child(3),
+    .banner-info-card:nth-child(4) {
+        border-right: 1px solid var(--banner-info-curso-cor-borda);
+        border-bottom: 1px solid var(--banner-info-curso-cor-borda);
+    }
+
+    .banner-info-numero {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 800;
+
+        background-color: rgba(255, 239, 199, 0.12);
+        color: var(--banner-info-curso-cor-numero);
+
+        border-radius: 16px;
+    }
+
+    .banner-info-card h2 {
+        margin-bottom: 5px;
+
+        font-size: 17px;
+        line-height: 1.2;
+    }
+
+    .banner-info-card p {
+        max-width: 100%;
+
+        font-size: 14.5px;
+        line-height: 1.45;
+    }
+
+    #forum-pratica {
+        width: min(90%, 520px);
+
+        margin: 54px auto 54px;
+    }
+
+    #forum-pratica-card {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        border-radius: 28px;
+    }
+
+    #forum-pratica-conteudo {
+        padding: 30px 24px 28px;
+    }
+
+    #forum-pratica-tag {
+        margin-bottom: 12px;
+
+        padding: 9px 14px;
+
+        font-size: 11.5px;
+    }
+
+    #forum-pratica-titulo {
+        margin-bottom: 16px;
+
+        font-size: clamp(26px, 7.4vw, 35px);
+    }
+
+    #forum-pratica-conteudo p {
+        margin-bottom: 24px;
+
+        font-size: 15.5px;
+        line-height: 1.55;
+    }
+
+    #forum-pratica-botao {
+        width: 100%;
+        min-height: 58px;
+
+        font-size: 17px;
+    }
+
+    #forum-pratica-imagem {
+        min-height: 250px;
+    }
+
+    #forum-pratica-imagem::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.18));
+    }
+
+    #unidades-modulo {
+        width: min(90%, 520px);
+
+        margin: 0 auto 66px;
+    }
+
+    #unidades-modulo-cabecalho {
+        margin-bottom: 24px;
+    }
+
+    #unidades-modulo-cabecalho h2 {
+        font-size: clamp(26px, 7.4vw, 35px);
+    }
+
+    #unidades-modulo-cabecalho p {
+        font-size: 15px;
+    }
+
+    #unidades-modulo-lista {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .unidade-card {
+        min-height: 535px;
+
+        padding: 18px;
+
+        border-radius: 31px;
+    }
+
+    .unidade-card-imagem {
+        height: 270px;
+
+        border-radius: 20px;
+    }
+
+    .unidade-card-imagem img {
+        filter: grayscale(0%) brightness(1) contrast(1);
+    }
+
+    .unidade-card-categoria {
+        min-width: 160px;
+        height: 48px;
+
+        padding-left: 25px;
+
+        font-size: 16.5px;
+    }
+
+    .unidade-card-categoria::after,
+    .unidade-card-categoria::before {
+        width: 25px;
+        height: 25px;
+
+        border-top-left-radius: 19px;
+
+        box-shadow: -9px -9px 0 8px var(--unidade-card-cor-fundo);
+    }
+
+    .unidade-card-categoria::after {
+        right: -25px;
+    }
+
+    .unidade-card-categoria::before {
+        bottom: -25px;
+    }
+
+    .unidade-card-conteudo {
+        padding-top: 18px;
+    }
+
+    .unidade-card-conteudo h3 {
+        margin-bottom: 13px;
+
+        font-size: 23px;
+    }
+
+    .unidade-card-conteudo p {
+        margin-bottom: 24px;
+
+        font-size: 16px;
+    }
+
+    .unidade-card-botao {
+        min-height: 62px;
+
+        margin-top: auto;
+
+        gap: 10px;
+
+        font-size: 18px;
+    }
+
+    .unidade-card-botao svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    #faq-modulo {
+        width: min(90%, 520px);
+
+        margin: 0 auto 70px;
+    }
+
+    #faq-modulo-cabecalho {
+        margin-bottom: 24px;
+    }
+
+    #faq-modulo-cabecalho h2 {
+        font-size: clamp(26px, 7.4vw, 35px);
+    }
+
+    #faq-modulo-cabecalho p {
+        font-size: 15px;
+    }
+
+    #faq-modulo-container {
+        gap: 16px;
+    }
+
+    .faq-item {
+        border-radius: 18px;
+    }
+
+    .faq-pergunta {
+        min-height: 82px;
+
+        padding: 23px 22px;
+        gap: 18px;
+    }
+
+    .faq-pergunta span:first-child {
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+    .faq-resposta p {
+        padding: 0 22px 26px;
+
+        font-size: 15.5px;
+        line-height: 1.55;
+    }
+
+    .faq-icone {
+        width: 20px;
+        height: 20px;
+
+        flex-basis: 20px;
+    }
+
+    .faq-icone::before,
+    .faq-icone::after {
+        width: 16px;
+        height: 3px;
+    }
+
+    #rodape-modulo {
+        padding: 42px 18px;
+    }
+
+    #rodape-modulo-container {
+        width: min(90%, 520px);
+    }
+
+    #rodape-modulo img {
+        width: min(100%, 520px);
+    }
+}
+
+
+/* ----- Smartphones ----- */
+
+@media (max-width: 480px) {
+    :root {
+        --border-radius-banner-modulo: 30px;
+    }
+
+    #banner-modulo {
+        height: 460px;
+    }
+
+    #banner-modulo-box-textual {
+        width: 92%;
+
+        top: 50%;
+    }
+
+    #banner-modulo-logo {
+        width: clamp(82px, 30vw, 125px);
+
+        margin-bottom: 16px;
+    }
+
+    #banner-modulo-box-textual #banner-modulo-titulo {
+        font-size: clamp(21px, 6.2vw, 27px);
+        line-height: 1.18;
+    }
+
+    #banner-modulo-box-textual #banner-modulo-titulo::after {
+        width: 64px;
+        height: 3px;
+
+        margin-top: 16px;
+    }
+
+    #banner-informacoes-modulo {
+        width: 90%;
+
+        margin-top: 24px;
+    }
+
+    #banner-informacoes-modulo-container {
+        gap: 12px;
+    }
+
+    .banner-info-card {
+        padding: 16px;
+
+        grid-template-columns: 52px 1fr;
+        gap: 12px;
+
+        border-radius: 16px;
+    }
+
+    .banner-info-numero {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+
+        border-radius: 14px;
+    }
+
+    .banner-info-card h2 {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .banner-info-card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    #forum-pratica {
+        width: 88%;
+
+        margin: 44px auto 48px;
+    }
+
+    #forum-pratica-card {
+        border-radius: 24px;
+    }
+
+    #forum-pratica-conteudo {
+        padding: 26px 20px 24px;
+    }
+
+    #forum-pratica-tag {
+        font-size: 10.5px;
+    }
+
+    #forum-pratica-titulo {
+        font-size: clamp(24px, 7vw, 30px);
+    }
+
+    #forum-pratica-conteudo p {
+        font-size: 15px;
+        line-height: 1.52;
+    }
+
+    #forum-pratica-botao {
+        min-height: 56px;
+
+        font-size: 16.5px;
+    }
+
+    #forum-pratica-imagem {
+        min-height: 220px;
+    }
+
+    #unidades-modulo {
+        width: 88%;
+
+        margin-top: 0;
+    }
+
+    .unidade-card {
+        min-height: 510px;
+
+        padding: 16px;
+
+        border-radius: 27px;
+    }
+
+    .unidade-card-imagem {
+        height: 235px;
+
+        border-radius: 18px;
+    }
+
+    .unidade-card-categoria {
+        min-width: 145px;
+        height: 45px;
+
+        padding-left: 22px;
+
+        font-size: 15.5px;
+    }
+
+    .unidade-card-categoria::after,
+    .unidade-card-categoria::before {
+        width: 23px;
+        height: 23px;
+
+        border-top-left-radius: 18px;
+
+        box-shadow: -9px -9px 0 8px var(--unidade-card-cor-fundo);
+    }
+
+    .unidade-card-categoria::after {
+        right: -23px;
+    }
+
+    .unidade-card-categoria::before {
+        bottom: -23px;
+    }
+
+    .unidade-card-conteudo {
+        padding-top: 17px;
+    }
+
+    .unidade-card-conteudo h3 {
+        margin-bottom: 12px;
+
+        font-size: 21px;
+        line-height: 1.1;
+    }
+
+    .unidade-card-conteudo p {
+        margin-bottom: 22px;
+
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .unidade-card-botao {
+        min-height: 58px;
+
+        margin-top: auto;
+
+        gap: 9px;
+
+        font-size: 17.5px;
+    }
+
+    .unidade-card-botao svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #faq-modulo {
+        width: 88%;
+
+        margin-bottom: 60px;
+    }
+
+    .faq-pergunta {
+        min-height: 78px;
+
+        padding: 21px 20px;
+    }
+
+    .faq-pergunta span:first-child {
+        font-size: 17px;
+    }
+
+    .faq-resposta p {
+        padding: 0 20px 24px;
+
+        font-size: 15px;
+    }
+
+    #rodape-modulo {
+        padding: 34px 16px;
+    }
+
+    #rodape-modulo-container {
+        width: 88%;
+    }
+
+    #rodape-modulo img {
+        width: 100%;
+    }
+}
+
+
+/* ----- Smartphones Muito Pequenos ----- */
+
+@media (max-width: 360px) {
+    #banner-modulo {
+        height: 430px;
+    }
+
+    #banner-modulo-logo {
+        width: 82px;
+
+        margin-bottom: 14px;
+    }
+
+    #banner-modulo-box-textual #banner-modulo-titulo {
+        font-size: 20px;
+    }
+
+    .banner-info-card {
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+        text-align: left;
+    }
+
+    .banner-info-numero {
+        width: fit-content;
+        height: auto;
+
+        padding: 9px 12px;
+
+        font-size: 20px;
+    }
+
+    #forum-pratica-card {
+        border-radius: 22px;
+    }
+
+    #forum-pratica-conteudo {
+        padding: 24px 18px 22px;
+    }
+
+    #forum-pratica-titulo {
+        font-size: 23px;
+    }
+
+    #forum-pratica-conteudo p {
+        font-size: 14.5px;
+    }
+
+    #forum-pratica-botao {
+        min-height: 54px;
+
+        font-size: 16px;
+    }
+
+    #forum-pratica-imagem {
+        min-height: 200px;
+    }
+
+    .unidade-card {
+        min-height: 490px;
+
+        padding: 14px;
+
+        border-radius: 24px;
+    }
+
+    .unidade-card-imagem {
+        height: 215px;
+
+        border-radius: 17px;
+    }
+
+    .unidade-card-categoria {
+        min-width: 132px;
+        height: 42px;
+
+        padding-left: 18px;
+
+        font-size: 14.5px;
+    }
+
+    .unidade-card-conteudo h3 {
+        font-size: 19.5px;
+    }
+
+    .unidade-card-conteudo p {
+        margin-bottom: 20px;
+
+        font-size: 14.5px;
+    }
+
+    .unidade-card-botao {
+        min-height: 55px;
+
+        margin-top: auto;
+
+        font-size: 17px;
+    }
+
+    .faq-pergunta {
+        padding: 20px 18px;
+    }
+
+    .faq-pergunta span:first-child {
+        font-size: 16px;
+    }
+
+    .faq-resposta p {
+        padding: 0 18px 22px;
+
+        font-size: 14.5px;
+    }
+}
