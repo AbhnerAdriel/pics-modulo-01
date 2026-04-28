@@ -44,7 +44,7 @@
                 <ul>
                     <li>
                         <button type="button" class="menu-link is-current" data-page="1">
-                            Acordo Pegadógico
+                            Acordo Pedagógico
                         </button>
                     </li>
                 </ul>
@@ -87,21 +87,21 @@
     <main id="conteudo-principal" tabindex="-1">
         <section id="conteudo-unidade" aria-labelledby="conteudo-unidade-titulo">
 
-            <article id="pagina-conteudo" class="pagina-conteudo" aria-live="polite" aria-labelledby="pagina-titulo">
+            <article id="pagina-conteudo" class="pagina-conteudo" aria-live="polite" aria-label="Conteúdo da página">
             </article>
 
             <nav class="paginacao-container" aria-label="Paginação da unidade">
                 <div class="paginacao-botoes">
-                    <button id="botao-voltar" class="paginacao-botao" type="button">
+                    <button id="botao-voltar" class="paginacao-botao" type="button" aria-controls="pagina-conteudo">
                         <span class="paginacao-icone" aria-hidden="true">←</span>
                         <span>Retornar</span>
                     </button>
 
                     <p id="paginacao-indicador" class="paginacao-indicador" aria-live="polite">
-                        Página 1 de 5
+                        Página 1 de 3
                     </p>
 
-                    <button id="botao-avancar" class="paginacao-botao paginacao-botao-proximo" type="button">
+                    <button id="botao-avancar" class="paginacao-botao paginacao-botao-proximo" type="button" aria-controls="pagina-conteudo">
                         <span class="paginacao-icone" aria-hidden="true">→</span>
                         <span>Avançar</span>
                     </button>
@@ -113,9 +113,9 @@
     </main>
 
     <div class="controle-flutuante-pagina" aria-label="Controle rápido de páginas">
-        <button id="flutuante-voltar" type="button" aria-label="Voltar página">←</button>
+        <button id="flutuante-voltar" type="button" aria-label="Voltar página" aria-controls="pagina-conteudo">←</button>
         <span id="flutuante-indicador">Página 1</span>
-        <button id="flutuante-avancar" type="button" aria-label="Avançar página">→</button>
+        <button id="flutuante-avancar" type="button" aria-label="Avançar página" aria-controls="pagina-conteudo">→</button>
     </div>
 
     <footer id="rodape-conteudo">
@@ -132,283 +132,344 @@
                 titulo: "Acordo Pedagógico",
                 classe: "pagina-acordo-pedagogico",
                 conteudo: `
-            <div class="acordo-texto-continuo" aria-labelledby="pagina-titulo">
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
 
-                <div class="acordo-imagem-texto-container">
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Orientações</span>
 
-                    <div class="acordo-imagem-item">
-                        <img class="acordo-imagem" src="./../../assets/images/acordo-pedagogico.jpg"
-                            alt="Ilustração de pessoas interagindo em um ambiente virtual, representando a colaboração e o convívio respeitoso no módulo">
-                    </div>
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Acordo Pedagógico</h2>
 
-                    <div class="acordo-texto-item">
-                        <h3 id="pagina-titulo">ACORDO PEDAGÓGICO</h3>
-
-                        <p class="acordo-resumo">
-                            Nesta seção, apresentamos orientações importantes sobre o nosso convívio no 
-                            ambiente virtual e sobre o percurso pedagógico deste módulo. A proposta é 
-                            favorecer uma experiência respeitosa, colaborativa e enriquecedora para todas 
-                            as pessoas participantes.
-                        </p>
-                    </div>
-                </div>
-
-                <ul class="acordo-pilares" aria-label="Pilares do acordo pedagógico">
-                    <li>
-                        <strong>Respeito mútuo</strong>
-                        <p>Valorizamos escuta ativa, diálogo ético e diversidade de trajetórias.</p>
-                    </li>
-                    <li>
-                        <strong>Participação ativa</strong>
-                        <p>Cada contribuição fortalece a construção coletiva do conhecimento.</p>
-                    </li>
-                    <li>
-                        <strong>Autonomia com apoio</strong>
-                        <p>Você estuda no seu ritmo com mediação cuidadosa da facilitação.</p>
-                    </li>
-                </ul>
-
-                <h4>Quem pode participar?</h4>
-
-                <p>
-                    Este módulo é aberto a todas as pessoas interessadas em aprender, compartilhar 
-                    e construir conhecimentos sobre as Práticas Integrativas e Complementares em 
-                    Saúde (PICS), especialmente no contexto de atuação de Agentes Comunitários de 
-                    Saúde e Agentes de Combate às Endemias.
-
-                </p>
-
-                <p>
-                    O percurso foi estruturado para que os conteúdos sejam autoexplicativos, permitindo 
-                    autonomia nos estudos, sem a obrigatoriedade de acompanhamento contínuo de professores 
-                    ou tutores. Ainda assim, você contará com a presença de um(a) facilitador(a), que 
-                    acompanhará o módulo e incentivará as interações.
-                </p>
-
-                <p>
-                    A proposta valoriza uma aprendizagem horizontal e colaborativa, em que cada participante 
-                    tem espaço para contribuir, trocar experiências e aprender com o grupo.
-
-                </p>
-
-                <div class="acordo-destaque" role="note" aria-label="Uso responsável do material">
-                    <p>
-                        <strong><span style="font-size: 30px;">⚠️</span> Uso responsável do conteúdo:</strong> O conteúdo disponibilizado pode ser 
-                        utilizado em atividades educativas, como ações de educação permanente em saúde. 
-                        Para isso, é importante observar alguns cuidados: manter a integridade do material, 
-                        não realizar alterações no conteúdo original, não utilizar para fins comerciais e 
-                        sempre citar a fonte, incluindo o módulo/curso e seus(suas) autores(as) e 
-                        organizadores(as).
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                        Nesta seção, apresentamos orientações importantes sobre o nosso 
+                        convívio no ambiente virtual e sobre o percurso pedagógico deste 
+                        módulo. A proposta é favorecer uma experiência respeitosa, colaborativa 
+                        e enriquecedora para todas as pessoas participantes.
                     </p>
                 </div>
 
-                <h4>Como interagir nos fóruns?</h4>
-
-                <p>
-                    Os fóruns são espaços de diálogo e troca. Neles, você poderá compartilhar ideias,
-                    experiências, casos práticos e contribuir com as discussões propostas ao longo do 
-                    módulo. Por isso, todos os fóruns recebem o nome de <strong>"Dialogando com a 
-                    Prática"</strong>.
-                </p>
-
-                <p>
-                    Entendemos a interação como uma conversa: você compartilha um ponto de vista, 
-                    outra pessoa pode complementar, questionar ou ampliar a discussão. Esse processo 
-                    enriquece a aprendizagem de todos.
-
-                </p>
-
-                <ol class="acordo-passos" aria-label="Passos para participar do fórum">
-                    <li>Clique em "responder" no tópico proposto.</li>
-                    <li>Escreva sua contribuição no campo "mensagem".</li>
-                    <li>Clique em "enviar mensagem ao fórum".</li>
-                    <li>Retorne quando quiser para dialogar com colegas e aprofundar o debate.</li>
-                </ol>
-
-                <h4>Quais são as orientações para participação nos fóruns?</h4>
-
-                <p>
-                    Todas as contribuições são bem-vindas. Para mantermos um espaço acolhedor e seguro,
-                    pedimos atenção às diretrizes abaixo:
-                </p>
-
-                <ul class="acordo-regras" aria-label="Diretrizes de convivência nos fóruns">
-                    <li>Respeite diferenças de opinião, crença, gênero, idade, condição física e trajetória.</li>
-                    <li>Não publique conteúdos ofensivos, discriminatórios, obscenos ou violentos.</li>
-                    <li>Não são permitidas agressões, calúnias, difamações, racismo ou qualquer ilegalidade.</li>
-                    <li>Proteja a privacidade das pessoas e evite expor informações sensíveis.</li>
-                    <li>Não divulgue produtos, serviços ou conteúdos com finalidade comercial.</li>
-                </ul>
-
-                <p>
-                    Caso alguma publicação desrespeite essas orientações, qualquer participante pode
-                    sinalizá-la. Além disso, a equipe de facilitação poderá intervir e, se necessário, remover o
-                    conteúdo.
-                </p>
-
-                <div class="acordo-cards-status" aria-label="Informações sobre certificado e progresso">
-                    <article>
-                        <h4>Como obter o certificado?</h4>
-                        <p>
-                            Ao concluir as atividades do módulo, você será convidado(a) para a avaliação final.
-                            Após a confirmação do envio, seu certificado ficará disponível para download na
-                            plataforma.
-                        </p>
-                    </article>
-
-                    <article>
-                        <h4>Como acompanhar seu progresso?</h4>
-                        <p>
-                            Sua evolução pode ser acompanhada pela ferramenta de progressão no topo da página.
-                            No plano do módulo, atividades concluídas aparecem em vermelho e pendentes em cinza.
-                        </p>
-                    </article>
+                <div class="conteudo-texto-imagem-flex-imagem">
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/acordo_pedagogico_imagem.jpg"
+                        alt="Pessoas dialogando e chegando a um comum arcodo">
                 </div>
 
-                <h4>Dúvidas frequentes</h4>
-
-                <p>
-                    Caso tenha dúvidas adicionais, acesse a página de Perguntas Frequentes do AVASUS para
-                    orientações rápidas sobre navegação, atividades e certificação.
-                </p>
             </div>
-        `
+        </section>
+
+        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
+            <h2 id="conteudo-texto-corrido-titulo">Quem pode participar?</h2>
+
+            <p>
+                Este módulo é aberto a todas as pessoas interessadas em aprender, compartilhar 
+                e construir conhecimentos sobre as Práticas Integrativas e Complementares 
+                em Saúde (PICS), especialmente no contexto de atuação de Agentes Comunitários 
+                de Saúde e Agentes de Combate às Endemias.
+            </p>
+
+            <p>
+                O percurso foi estruturado para que os conteúdos sejam autoexplicativos, permitindo 
+                autonomia nos estudos, sem a obrigatoriedade de acompanhamento contínuo de professores 
+                ou tutores. Ainda assim, você contará com a presença de um(a) facilitador(a), que 
+                acompanhará o módulo e incentivará as interações.
+            </p>
+
+            <p>
+                A proposta valoriza uma aprendizagem horizontal e colaborativa, em que cada participante 
+                tem espaço para contribuir, trocar experiências e aprender com o grupo.
+            </p>
+
+            <div class="conteudo-texto-corrido-imagem">
+                <figure class="conteudo-texto-corrido-imagem">
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/mulher-estudando-sobre-pics.png"
+                        alt="Mulher estudando sobre PICS em um ambiente virtual">
+
+                    <figcaption>
+                        Mulher estudando sobre PICS em um ambiente virtual - Foto gerada por IA
+                    </figcaption>
+                </figure>
+            </div>
+
+            <p>
+                O conteúdo disponibilizado pode ser utilizado em atividades educativas, como ações de 
+                educação permanente em saúde. Para isso, é importante observar alguns cuidados: manter 
+                a integridade do material, não realizar alterações no conteúdo original, não utilizar 
+                para fins comerciais e sempre citar a fonte, incluindo o módulo/curso e seus(suas) 
+                autores(as) e organizadores(as).
+            </p>
+
+            <h2>Como interagir nos fóruns?</h2>
+
+            <p>
+                Os fóruns foram pensados como espaços de diálogo e troca. Neles, você poderá compartilhar 
+                ideias, experiências, casos práticos e contribuir com as discussões propostas ao longo do 
+                módulo. Por isso, todos os fóruns recebem o nome de <strong>“Dialogando com a Prática”</strong>.
+            </p>
+
+            <p>
+                Entendemos a interação como uma conversa: você compartilha um ponto de vista, outra pessoa pode 
+                complementar, questionar ou ampliar a discussão. Esse processo enriquece a aprendizagem de todos.
+            </p>
+
+            <div class="conteudo-texto-corrido-imagem">
+                <figure class="conteudo-texto-corrido-imagem">
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/mulher-interagindo-no-forum.png"
+                        alt="Mulher participando de fórum virtual sobre PICS - Foto gerada por IA">
+
+                    <figcaption>
+                        Mulher estudando sobre PICS em um ambiente virtual - Foto gerada por IA
+                    </figcaption>
+                </figure>
+            </div>            
+
+            <p>
+                Para participar, basta clicar em <span class="conteudo-texto-corrido-marcacao">“responder”</span>, 
+                escrever sua contribuição no campo <span class="conteudo-texto-corrido-marcacao">“mensagem”</span> e, 
+                em seguida, clicar em <span class="conteudo-texto-corrido-marcacao">“enviar mensagem ao fórum”.</span> 
+                Você pode participar quantas vezes desejar, interagir com diferentes colegas e retornar sempre que 
+                quiser para dar continuidade às conversas.
+            </p>
+
+            <h2>Quais são as orientações para participação nos fóruns?</h2>
+
+            <p>
+                Todas as contribuições são bem-vindas e valorizadas. Para mantermos um ambiente respeitoso 
+                e acolhedor, é importante observar algumas diretrizes:
+            </p>
+
+            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
+                <div class="lista-ordenada-estilizada-1-card">
+                    <h2 id="lista-ordenada-estilizada-1-titulo">
+                        Ao longo do percurso, você será convidado(a) a:
+                    </h2>
+
+                    <ol class="lista-ordenada-estilizada-1">
+                        <li>Não são permitidas manifestações político-partidárias ou qualquer forma de preconceito (religião, gênero, idade, condição física, posição política, entre outros)</li>
+                        <li>Evite o uso de imagens ou linguagem inadequadas, ofensivas ou de cunho obsceno;</li>
+                        <li>Não são aceitas agressões, ofensas, calúnias, difamações, racismo, incitação à violência ou qualquer tipo de ilegalidade;</li>
+                        <li>Respeite a privacidade das pessoas;</li>
+                        <li>Não é permitida a divulgação de produtos, serviços ou conteúdos com finalidade comercial.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p>
+                Caso alguma publicação desrespeite essas orientações, qualquer participante pode sinalizá-la. 
+                Além disso, a equipe de facilitação poderá intervir e, se necessário, remover o conteúdo.
+            </p>
+
+            <h2>Como obter o certificado?</h2>
+
+            <p>
+                Ao concluir todas as atividades do módulo, você será convidado(a) a realizar a avaliação final. 
+                Após a confirmação do envio dessa avaliação, seu certificado ficará disponível na plataforma 
+                para download.
+            </p>
+
+            <h2>Como acompanhar seu progresso?</h2>
+
+            <p>
+                Você poderá acompanhar sua evolução por meio da ferramenta de progressão, disponível no topo da página. Além disso, no plano do módulo, as atividades já concluídas serão destacadas em vermelho, enquanto aquelas ainda pendentes permanecerão em cinza.
+            </p>
+
+            <h3>Dúvidas frequentes</h3>
+
+            <p>
+                Caso tenha dúvidas adicionais, você pode acessar a página de <strong>Perguntas Frequentes</strong>
+                para obter respostasdo AVASUS.
+            </p>
+
+        </section>
+                
+                `
             },
+
             {
-                titulo: "Boas-vindas!",
+                titulo: "Boas-Vindas",
                 classe: "pagina-boas-vindas",
                 conteudo: `
-            <div class="boas-vindas-texto-continuo" aria-labelledby="pagina-titulo">
-                <h3 id="pagina-titulo">BOAS-VINDAS!</h3>
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
 
-                <h4>Seja muito bem-vindo(a)!</h4>
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Introdução</span>
 
-                <p>
-                    As Práticas Integrativas e Complementares em Saúde (PICS) são importantes ferramentas de
-                    cuidado, pois consideram o ser humano em sua totalidade, nas dimensões física, emocional,
-                    mental e social. Essas práticas ampliam as formas de cuidado em saúde, fortalecem o olhar
-                    dos profissionais sobre o processo saúde-doença e incentivam o autocuidado de forma
-                    consciente e responsável.
-                </p>
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Boas-Vindas!</h2>
 
-                <p>
-                    É com grande satisfação que acolhemos você no módulo Práticas Integrativas e
-                    Complementares em Saúde (PICS) na Atuação de Agentes Comunitários de Saúde e Agentes
-                    de Combate às Endemias.
-                </p>
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                       As Práticas Integrativas e Complementares em Saúde (PICS) são importantes 
+                       ferramentas de cuidado, pois consideram o ser humano em sua totalidade, nas 
+                       dimensões física, emocional, mental e social. Essas práticas ampliam as formas 
+                       de cuidado em saúde, fortalecem o olhar dos profissionais sobre o processo 
+                       saúde-doença e incentivam o autocuidado de forma consciente e responsável.
+                    </p>
+                </div>
 
-                <p>
-                    Neste percurso, você encontrará recursos didáticos variados e pensados para apoiar sua
-                    aprendizagem. O objetivo é contribuir com a qualificação profissional para o uso seguro e
-                    responsável das PICS na Atenção Primária, fortalecendo a promoção da saúde e o cuidado
-                    integral à população.
-                </p>
+                <div class="conteudo-texto-imagem-flex-imagem">
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/moça-dando-boas-vindas.png"
+                        alt="Moça dando boas-vindas ao módulo sobre PICS">
+                </div>
 
-                <p>
-                    Este módulo também busca incentivar a atuação de Agentes Comunitários de Saúde (ACS) e
-                    Agentes de Combate às Endemias (ACE) no território, ampliando possibilidades de cuidado
-                    por meio das PICS. Ele integra as ações do Ministério da Saúde voltadas à implementação da
-                    Política Nacional de Práticas Integrativas e Complementares no SUS (PNPIC), tornando essas
-                    práticas mais acessíveis aos profissionais da área.
-                </p>
-
-                <p>
-                    A formação é destinada a ACS, ACE, usuários do SUS e demais pessoas interessadas na
-                    temática. Ao longo do módulo, você terá contato com práticas como:
-                </p>
-
-                <ul>
-                    <li>Plantas medicinais e fitoterapia</li>
-                    <li>Práticas corporais da Medicina Tradicional Chinesa (MTC)</li>
-                    <li>Terapia Comunitária Integrativa (TCI)</li>
-                    <li>Yoga</li>
-                    <li>Meditação</li>
-                    <li>Automassagem</li>
-                </ul>
-
-                <p>
-                    Essas práticas podem apoiar a promoção da saúde, o cuidado integral e o fortalecimento da
-                    autonomia no dia a dia.
-                </p>
-
-                <p>
-                    O módulo foi organizado com base nas diretrizes da PNPIC e tem como proposta oferecer
-                    ferramentas práticas para sua atuação. Ele está estruturado em:
-                </p>
-
-                <ul>
-                    <li>uma unidade inicial de apresentação;</li>
-                    <li>quatro unidades de estudo;</li>
-                    <li>uma unidade de encerramento e avaliação.</li>
-                </ul>
-
-                <p>
-                    Em cada unidade, você encontrará materiais diversos como textos, vídeos, apresentações,
-                    histórias em quadrinhos e estudos de caso. Além das atividades “Dialogando com a Prática”,
-                    que convidam você a relacionar os conteúdos com sua realidade e seu contexto de trabalho.
-                </p>
-
-                <p>
-                    Para iniciar, você assistirá a um vídeo de acolhimento apresentado pelo Núcleo Técnico de
-                    Gestão da Política Nacional de Práticas Integrativas e Complementares no SUS, que dá as
-                    boas-vindas e apresenta este percurso formativo.
-                </p>
-
-                <p>
-                    Esperamos que este seja um espaço de aprendizado significativo, troca de experiências e
-                    construção coletiva.
-                </p>
-
-                <p> 
-                    🚀 Desejamos uma excelente jornada!
-                </p>
             </div>
-        `
+        </section>
+
+        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
+            <p>
+                É com grande satisfação que acolhemos você no módulo Práticas Integrativas e 
+                Complementares em Saúde (PICS) na Atuação de Agentes Comunitários de Saúde e 
+                Agentes de Combate às Endemias.
+            </p>
+
+            <p>
+                Neste percurso, você encontrará recursos didáticos variados e pensados para apoiar 
+                sua aprendizagem. O objetivo é contribuir com a qualificação profissional para o uso 
+                seguro e responsável das PICS na Atenção Primária, fortalecendo a promoção da saúde e 
+                o cuidado integral à população.
+            </p>
+
+            <p>
+                Este módulo também busca incentivar a atuação de Agentes Comunitários de Saúde (ACS) e 
+                Agentes de Combate às Endemias (ACE) no território, ampliando possibilidades de cuidado 
+                por meio das PICS. Ele integra as ações do Ministério da Saúde voltadas à implementação 
+                da Política Nacional de Práticas Integrativas e Complementares no SUS (PNPIC), tornando 
+                essas práticas mais acessíveis aos profissionais da área.
+            </p>
+
+            <p>
+               A formação é destinada a ACS, ACE, usuários do SUS e demais pessoas interessadas na temática. 
+               Ao longo do módulo, você terá contato com práticas como:
+            </p>
+
+            <div class="lista-nao-ordenada-personalizada-wrapper" aria-label="Lista de práticas integrativas e complementares">
+                <div class="lista-nao-ordenada-personalizada-card" style="background: #c7e3fc;">
+                    <ul class="lista-nao-ordenada-personalizada">
+                        <li style="background-color: #FFF;">Plantas medicinais e fitoterapia</li>
+                        <li style="background-color: #FFF;">Práticas corporais da Medicina Tradicional Chinesa (MTC)</li>
+                        <li style="background-color: #FFF;">Terapia Comunitária Integrativa (TCI)</li>
+                        <li style="background-color: #FFF;">Yoga</li>
+                        <li style="background-color: #FFF;">Meditação</li>
+                        <li style="background-color: #FFF;">Automassagem</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>
+                Essas práticas podem apoiar a promoção da saúde, o cuidado integral e o fortalecimento 
+                da autonomia no dia a dia.
+            </p>
+
+            <p>
+                O módulo foi organizado com base nas diretrizes da PNPIC e tem como proposta oferecer 
+                ferramentas práticas para sua atuação. Ele está estruturado em:
+            </p>
+
+            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
+                <div class="lista-ordenada-estilizada-1-card">
+                    <h2 id="lista-ordenada-estilizada-1-titulo">
+                        Ao longo do percurso, você será convidado(a) a:
+                    </h2>
+
+                    <ol class="lista-ordenada-estilizada-1">
+                        <li>uma unidade inicial de apresentação;</li>
+                        <li>quatro unidades de estudo;</li>
+                        <li>uma unidade de encerramento e avaliação.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p>
+                Em cada unidade, você encontrará materiais diversos como textos, vídeos, apresentações, 
+                histórias em quadrinhos e estudos de caso. Além das atividades “Dialogando com a Prática”, 
+                que convidam você a relacionar os conteúdos com sua realidade e seu contexto de trabalho.
+            </p>
+
+            <p>
+                Para iniciar, você assistirá a um vídeo de acolhimento apresentado pelo <span class="conteudo-texto-corrido-marcacao">Núcleo Técnico 
+                de Gestão da Política Nacional de Práticas Integrativas e Complementares no SUS</span>, que dá 
+                as boas-vindas e apresenta este percurso formativo.
+            </p>
+
+            <p>
+                Esperamos que este seja um espaço de aprendizado significativo, troca de experiências e 
+                construção coletiva.
+            </p>
+
+            <p>
+                <strong>Desejamos uma excelente jornada!</strong>
+            </p>
+
+        </section>
+                `
             },
+
             {
                 titulo: "Conhecendo o Módulo",
-                classe: "pagina-conhecendo-modulo",
+                classe: "pagina-conhecendo-o-modulo",
                 conteudo: `
-            <div class="conhecendo-modulo-texto-continuo" aria-labelledby="pagina-titulo">
-                <h3 id="pagina-titulo">CONHECENDO O MÓDULO</h3>
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
 
-                <p>
-                    Você está iniciando um módulo organizado em cinco unidades. A primeira é este espaço de
-                    acolhimento, onde apresentamos a estrutura, os objetivos e os conteúdos do percurso
-                    formativo. Aqui, você também conhecerá a Política Nacional de Práticas Integrativas e
-                    Complementares no SUS, além do contexto das PICS no Brasil e no mundo.
-                </p>
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Fique por Dentro</span>
 
-                <p>
-                    Este módulo foi pensado para apoiar a atuação de Agentes Comunitários de Saúde (ACS) e
-                    Agentes de Combate às Endemias (ACE) no território, por meio do uso das PICS. Ao final,
-                    você terá acesso à Biblioteca, com todos os materiais disponíveis para download, que
-                    podem ser utilizados livremente para fins educativos, desde que sem alterações, sem uso
-                    comercial e com a devida citação da fonte.
-                </p>
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Conhecendo o Módulo</h2>
 
-                <p>
-                    As demais unidades contam com diferentes estratégias de aprendizagem, como:
-                </p>
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                       Você está iniciando um módulo organizado em cinco unidades. A primeira é este 
+                       espaço de acolhimento, onde apresentamos a estrutura, os objetivos e os conteúdos 
+                       do percurso formativo. Aqui, você também conhecerá a Política Nacional de Práticas 
+                       Integrativas e Complementares no SUS, além do contexto das PICS no Brasil e no mundo.
+                    </p>
+                </div>
 
-                <ul>
-                    <li>slides com conteúdos teóricos;</li>
-                    <li>vídeos com experiências e entrevistas;</li>
-                    <li>histórias em quadrinhos para contextualização;</li>
-                    <li>a seção “Dialogando com a Prática”, com fóruns, questões e reflexões;</li>
-                    <li>leituras complementares para aprofundamento.</li>
-                </ul>
+                <div class="conteudo-texto-imagem-flex-imagem">
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/comecando-o-modulo.jpg"
+                        alt="Moça dando boas-vindas ao módulo sobre PICS">
+                </div>
 
-                <p>
-                    O módulo também inclui momentos de autoavaliação e avaliação final.
-                </p>
-
-                <p>
-                    Esperamos que este seja um percurso leve, significativo e útil para sua prática.
-                </p>
             </div>
-        `
+        </section>
+
+        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
+            <p>
+               Este módulo foi pensado para apoiar a atuação de Agentes Comunitários de Saúde (ACS) 
+               e Agentes de Combate às Endemias (ACE) no território, por meio do uso das PICS. Ao final, 
+               você terá acesso à Biblioteca, com todos os materiais disponíveis para download, que podem 
+               ser utilizados livremente para fins educativos, desde que sem alterações, sem uso comercial 
+               e com a devida citação da fonte.
+            </p>
+            
+            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
+                <div class="lista-ordenada-estilizada-1-card">
+                    <h2 id="lista-ordenada-estilizada-1-titulo">
+                       As demais unidades contam com diferentes estratégias de aprendizagem, como:
+                    </h2>
+
+                    <ol class="lista-ordenada-estilizada-1">
+                        <li>slides com conteúdos teóricos;</li>
+                        <li>vídeos com experiências e entrevistas;</li>
+                        <li>histórias em quadrinhos para contextualização;</li>
+                        <li>a seção “Dialogando com a Prática”, com fóruns, questões e reflexões;</li>
+                        <li>leituras complementares para aprofundamento.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p>
+                O módulo também inclui momentos de autoavaliação e avaliação final.
+            </p>
+            <p>
+                <strong>Esperamos que este seja um percurso leve, significativo e útil para sua prática.</strong>
+            </p>
+
+        </section>
+                `
             }
+
         ];
 
         const paginaConteudo = document.getElementById("pagina-conteudo");
@@ -471,6 +532,29 @@
             });
         }
 
+        function sincronizarMenuComPaginas() {
+            menuLinks.forEach((link) => {
+                const numeroPagina = Number(link.dataset.page);
+                const pagina = paginasUnidade[numeroPagina - 1];
+                const itemMenu = link.closest("li");
+
+                if (!pagina) {
+                    if (itemMenu) {
+                        itemMenu.hidden = true;
+                    }
+
+                    return;
+                }
+
+                link.textContent = pagina.titulo;
+                link.setAttribute("aria-label", `Ir para a página ${numeroPagina}: ${pagina.titulo}`);
+
+                if (itemMenu) {
+                    itemMenu.hidden = false;
+                }
+            });
+        }
+
         function atualizarMenuLateral() {
             menuLinks.forEach((link) => {
                 const paginaDoLink = Number(link.dataset.page);
@@ -517,6 +601,17 @@
 
             paginaConteudo.className = `pagina-conteudo ${pagina.classe}`;
             paginaConteudo.innerHTML = pagina.conteudo;
+
+            const primeiroTitulo = paginaConteudo.querySelector("h1, h2, h3");
+
+            if (primeiroTitulo) {
+                primeiroTitulo.id = "pagina-titulo";
+                paginaConteudo.setAttribute("aria-labelledby", "pagina-titulo");
+                paginaConteudo.removeAttribute("aria-label");
+            } else {
+                paginaConteudo.removeAttribute("aria-labelledby");
+                paginaConteudo.setAttribute("aria-label", pagina.titulo);
+            }
 
             document.title = `${pagina.titulo} | Unidade 1 | PICS para ACS e ACE`;
 
@@ -596,6 +691,25 @@
                 fecharMenuLateral();
             }
 
+            if (event.key === "Tab" && menuLateral.classList.contains("is-open")) {
+                const focoElementos = menuLateral.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+
+                if (focoElementos.length > 0) {
+                    const primeiroElemento = focoElementos[0];
+                    const ultimoElemento = focoElementos[focoElementos.length - 1];
+
+                    if (event.shiftKey && document.activeElement === primeiroElemento) {
+                        event.preventDefault();
+                        ultimoElemento.focus();
+                    } else if (!event.shiftKey && document.activeElement === ultimoElemento) {
+                        event.preventDefault();
+                        primeiroElemento.focus();
+                    }
+                }
+            }
+
             if (event.key === "ArrowLeft" && paginaAtual > 1) {
                 mudarPagina(paginaAtual - 1);
             }
@@ -613,9 +727,51 @@
             }
         });
 
+        sincronizarMenuComPaginas();
         criarNumerosPaginacao();
         paginaAtual = obterPaginaPeloHash();
         renderizarPagina();
+
+        // Oculta o controle flutuante quando a paginação principal estiver visível na tela.
+        (function () {
+            const paginacaoContainer = document.querySelector('.paginacao-container');
+            const controleFlutuante = document.querySelector('.controle-flutuante-pagina');
+
+            if (!paginacaoContainer || !controleFlutuante) return;
+
+            // Garantir transição suave caso CSS não tenha
+            controleFlutuante.style.transition = controleFlutuante.style.transition || 'opacity 0.22s ease, transform 0.22s ease, visibility 0.22s';
+
+            function ocultar() {
+                controleFlutuante.style.opacity = '0';
+                controleFlutuante.style.transform = 'translateY(12px)';
+                controleFlutuante.style.visibility = 'hidden';
+                controleFlutuante.style.pointerEvents = 'none';
+                controleFlutuante.setAttribute('aria-hidden', 'true');
+            }
+
+            function mostrar() {
+                controleFlutuante.style.opacity = '';
+                controleFlutuante.style.transform = '';
+                controleFlutuante.style.visibility = '';
+                controleFlutuante.style.pointerEvents = '';
+                controleFlutuante.setAttribute('aria-hidden', 'false');
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        ocultar();
+                    } else {
+                        mostrar();
+                    }
+                });
+            }, {
+                threshold: [0, 0.12, 0.5]
+            });
+
+            observer.observe(paginacaoContainer);
+        })();
     </script>
 
     <script>
@@ -992,12 +1148,7 @@
             width: var(--progresso-scroll, 0%);
             height: 5px;
 
-            background: linear-gradient(
-                90deg,
-                #a3cd6d,
-                #4f633d,
-                #735f20
-            );
+            background: linear-gradient(90deg, #4f633d, #735f20);
 
             pointer-events: none;
 
