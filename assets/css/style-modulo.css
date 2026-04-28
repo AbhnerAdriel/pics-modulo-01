@@ -958,7 +958,8 @@ button:focus-visible,
 
 /* ----- Responsividade ----- */
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) 
+{
     #banner-informacoes-modulo {
         width: 84%;
         margin-top: -75px;
@@ -1062,6 +1063,14 @@ button:focus-visible,
 
     #faq-modulo {
         width: 82%;
+    }
+}
+
+/* ----- Desativação de Efeitos em Dispositivos Móveis ----- */
+
+@media (max-width: 1024px) {
+    .unidade-card-imagem img {
+        filter: grayscale(0%) brightness(1) contrast(1);
     }
 }
 
