@@ -13,6 +13,41 @@
 <body>
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
+    <div class="menu-navegacao-wrapper">
+        <button id="abrir-menu-navegacao" class="menu-navegacao-botao" type="button"
+            aria-label="Abrir menu de navegação do módulo" aria-expanded="false"
+            aria-controls="menu-navegacao-lateral">
+            <span class="menu-navegacao-icone" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <span class="menu-navegacao-texto">Menu</span>
+        </button>
+    </div>
+
+    <div id="menu-navegacao-backdrop" class="menu-navegacao-backdrop" hidden></div>
+
+    <aside id="menu-navegacao-lateral" class="menu-navegacao-lateral" aria-label="Menu de navegação do módulo"
+        aria-hidden="true" inert>
+        <div class="menu-navegacao-cabecalho">
+            <h2>Menu Navegação</h2>
+
+            <button id="fechar-menu-navegacao" class="menu-navegacao-fechar" type="button"
+                aria-label="Fechar menu de navegação">
+                ×
+            </button>
+        </div>
+
+        <nav class="menu-navegacao-conteudo" aria-label="Unidades do módulo">
+            <section class="menu-navegacao-grupo" aria-labelledby="menu-unidades-titulo">
+                <h3 id="menu-unidades-titulo">Unidades do Módulo</h3>
+
+                <ul id="menu-unidades-lista"></ul>
+            </section>
+        </nav>
+    </aside>
+
     <header id="banner-modulo" aria-labelledby="banner-modulo-titulo">
         <div class="dark-overlay" aria-hidden="true"></div>
 
@@ -74,15 +109,16 @@
             </div>
         </section>
 
-        <section id="forum-pratica" aria-labelledby="forum-pratica-titulo" aria-describedby="forum-pratica-descricao">
-            <div id="forum-pratica-card">
+        <!-- o Fórum Dialogando com a Prática irá ser realocado para o final de cada Unidade -->
+        <!-- <section class="forum-pratica" aria-labelledby="forum-pratica-titulo" aria-describedby="forum-pratica-descricao">
+            <div class="forum-pratica-card">
 
-                <div id="forum-pratica-conteudo">
-                    <span id="forum-pratica-tag">Fórum do Módulo</span>
+                <div class="forum-pratica-conteudo">
+                    <span class="forum-pratica-tag">Fórum do Módulo</span>
 
-                    <h2 id="forum-pratica-titulo">Dialogando com a Prática</h2>
+                    <h2 id="forum-pratica-titulo" class="forum-pratica-titulo">Dialogando com a Prática</h2>
 
-                    <p id="forum-pratica-descricao">
+                    <p id="forum-pratica-descricao" class="forum-pratica-descricao">
                         Os fóruns foram pensados como espaços de diálogo, escuta e troca entre os
                         participantes do módulo. Compartilhe experiências, tire dúvidas,
                         reflita sobre os conteúdos estudados e dialogue com outros alunos sobre a
@@ -91,35 +127,67 @@
 
                     <a
                         href="./forum-dialogando-com-a-pratica.html"
-                        id="forum-pratica-botao"
+                        class="forum-pratica-botao"
                         aria-label="Acessar o fórum Dialogando com a Prática">
                         Acessar fórum
                         <span aria-hidden="true">→</span>
                     </a>
                 </div>
 
-                <div id="forum-pratica-imagem">
+                <div class="forum-pratica-imagem">
                     <img
                         src="./assets/images/forum-dialogando-com-a-pratica.jpg"
                         alt="Pessoas dialogando em um espaço de aprendizagem colaborativa">
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
         <section id="unidades-modulo" aria-labelledby="unidades-modulo-titulo">
             <div id="unidades-modulo-cabecalho">
-                <span>Conteúdo do Módulo</span>
+                <!-- <span>Conteúdo do Módulo</span> -->
+                <span>Unidades</span>
 
                 <h2 id="unidades-modulo-titulo">Unidades do Módulo</h2>
 
                 <p>
-                    Este módulo foi organizado em cinco unidades, abordando conceitos, bases legais,
-                    práticas integrativas, atuação no território, questões éticas e avaliação final.
+                    Este módulo foi estruturado e dividido em unidades com o objetivo de promover a
+                    qualificação profissional de forma assertiva e organizada.
                 </p>
             </div>
 
             <div id="unidades-modulo-lista" role="list">
+
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-introducao-titulo">
+                    <div class="unidade-card-imagem">
+                        <img
+                            src="./assets/images/unidades/introducao_bg.png"
+                            alt=""
+                            aria-hidden="true">
+                        <span class="unidade-card-categoria">Introdução</span>
+                    </div>
+
+                    <div class="unidade-card-conteudo">
+                        <h3 id="unidade-1-titulo">Apresentação</h3>
+                        <p>
+                            Conheça a estrutura, os objetivos e os conteúdos do módulo.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./unidade/introducao/conteudo.html"
+                        target="_blank"
+                        class="unidade-card-botao"
+                        aria-label="Acessar Introdução: Apresentação">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
+                            <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
+                            <path d="M9 7h6" />
+                            <path d="M9 10h6" />
+                        </svg>
+                        Acessar
+                    </a>
+                </article>
 
                 <article class="unidade-card" role="listitem" aria-labelledby="unidade-1-titulo">
                     <div class="unidade-card-imagem">
@@ -131,9 +199,9 @@
                     </div>
 
                     <div class="unidade-card-conteudo">
-                        <h3 id="unidade-1-titulo">Introdução às PICS no SUS: princípios e bases legais</h3>
+                        <h3 id="unidade-2-titulo">Introdução às PICS no SUS</h3>
                         <p>
-                            Conheça os fundamentos das PICS, sua organização no SUS e suas bases legais.
+                            Explore o contexto das PICS no Brasil, e conheça as principais práticas integrativas.
                         </p>
                     </div>
 
@@ -141,7 +209,7 @@
                         href="./unidade/1/conteudo.html"
                         target="_blank"
                         class="unidade-card-botao"
-                        aria-label="Acessar Unidade 1: Introdução às PICS no SUS, princípios e bases legais">
+                        aria-label="Acessar Unidade 1: Introdução às PICS no SUS">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
                             <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
@@ -162,14 +230,15 @@
                     </div>
 
                     <div class="unidade-card-conteudo">
-                        <h3 id="unidade-2-titulo">Práticas integradas à atuação dos ACS e ACE - Parte I</h3>
+                        <h3 id="unidade-3-titulo">Práticas integradas à atuação dos ACS e ACE - Parte I</h3>
                         <p>
-                            Explore práticas que dialogam com o cuidado em saúde no território.
+                            Aprofunde práticas integrativas e reflita sobre limites, segurança e responsabilidade.
                         </p>
                     </div>
 
                     <a
-                        href="./unidade-2/index.html"
+                        href="./unidade/2/conteudo.html"
+                        target="_blank"
                         class="unidade-card-botao"
                         aria-label="Acessar Unidade 2: Práticas integradas à atuação dos ACS e ACE - Parte I">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -192,14 +261,15 @@
                     </div>
 
                     <div class="unidade-card-conteudo">
-                        <h3 id="unidade-3-titulo">Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
+                        <h3 id="unidade-4-titulo">Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II</h3>
                         <p>
-                            Aprofunde práticas integrativas e reflita sobre limites, segurança e responsabilidade.
+                            Reflita sobre o campo de atuação no território e as PICS como estratégia de cuidado integral.
                         </p>
                     </div>
 
                     <a
-                        href="./unidade-3/index.html"
+                        href="./unidade/3/conteudo.html"
+                        target="_blank"
                         class="unidade-card-botao"
                         aria-label="Acessar Unidade 3: Práticas integradas à atuação dos ACS e ACE e questões éticas - Parte II">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -222,14 +292,15 @@
                     </div>
 
                     <div class="unidade-card-conteudo">
-                        <h3 id="unidade-4-titulo">Campo de atuação no território e PICS como estratégia de cuidado integral</h3>
+                        <h3 id="unidade-5-titulo">Campo de atuação no território e PICS como estratégia de cuidado integral</h3>
                         <p>
-                            Consolide orientações éticas para a atuação segura dos ACS e ACE com as PICS.
+                            Revise os aprendizados e realize a avaliação final do módulo.
                         </p>
                     </div>
 
                     <a
-                        href="./unidade-4/index.html"
+                        href="./unidade/4/conteudo.html"
+                        target="_blank"
                         class="unidade-card-botao"
                         aria-label="Acessar Unidade 4: Campo de atuação no território e PICS como estratégia de cuidado integral">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -242,26 +313,27 @@
                     </a>
                 </article>
 
-                <article class="unidade-card" role="listitem" aria-labelledby="unidade-5-titulo">
+                <article class="unidade-card" role="listitem" aria-labelledby="unidade-conclusao-titulo">
                     <div class="unidade-card-imagem">
                         <img
-                            src="./assets/images/unidades/unidade_05_bg.jpg"
+                            src="./assets/images/unidades/conclusão.png"
                             alt=""
                             aria-hidden="true">
-                        <span class="unidade-card-categoria">Unidade 5</span>
+                        <span class="unidade-card-categoria">Conclusão</span>
                     </div>
 
                     <div class="unidade-card-conteudo">
-                        <h3 id="unidade-5-titulo">Autoavaliação e Avaliação do módulo</h3>
+                        <h3 id="unidade-6-titulo">Autoavaliação e Avaliação do módulo</h3>
                         <p>
                             Revise os aprendizados e realize a avaliação final do módulo.
                         </p>
                     </div>
 
                     <a
-                        href="./unidade-5/index.html"
+                        href="./unidade/conclusao/conteudo.html"
+                        target="_blank"
                         class="unidade-card-botao"
-                        aria-label="Acessar Unidade 5: Autoavaliação e Avaliação do módulo">
+                        aria-label="Acessar Conclusão: Autoavaliação e Avaliação do módulo">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M5 4.5C5 3.67 5.67 3 6.5 3H19v15.5c0 .28-.22.5-.5.5H7.25A2.25 2.25 0 0 0 5 21.25V4.5Z" />
                             <path d="M5 21.25A2.25 2.25 0 0 1 7.25 19H19" />
@@ -275,160 +347,6 @@
             </div>
         </section>
 
-        <section id="faq-modulo" aria-labelledby="faq-modulo-titulo">
-            <div id="faq-modulo-cabecalho">
-                <span>Fique por dentro</span>
-                <h2 id="faq-modulo-titulo">Informações sobre o Módulo</h2>
-            </div>
-
-            <div id="faq-modulo-container">
-
-                <article class="faq-item ativo">
-                    <h3>
-                        <button
-                            id="faq-pergunta-1"
-                            class="faq-pergunta"
-                            type="button"
-                            aria-expanded="true"
-                            aria-controls="faq-resposta-1">
-                            <span>Qual é o Objetivo do Módulo?</span>
-                            <span class="faq-icone" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-
-                    <div
-                        id="faq-resposta-1"
-                        class="faq-resposta"
-                        role="region"
-                        aria-labelledby="faq-pergunta-1">
-                        <div>
-                            <p>
-                                Qualificar Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE)
-                                para o uso seguro e responsável das PICS no território. Ao longo do módulo, você irá
-                                compreender conceitos, bases legais e aspectos éticos relacionados a práticas como plantas
-                                medicinais e fitoterapia, Medicina Tradicional Chinesa, Terapia Comunitária Integrativa
-                                (TCI), Yoga, Meditação e Automassagem, contribuindo para a promoção da saúde e o cuidado
-                                integral.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="faq-item">
-                    <h3>
-                        <button
-                            id="faq-pergunta-2"
-                            class="faq-pergunta"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="faq-resposta-2">
-                            <span>Quem é o Público Alvo?</span>
-                            <span class="faq-icone" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-
-                    <div
-                        id="faq-resposta-2"
-                        class="faq-resposta"
-                        role="region"
-                        aria-labelledby="faq-pergunta-2"
-                        hidden>
-                        <div>
-                            <p>
-                                Destina-se a ACS, ACE, usuários do SUS e demais interessados. O acesso é livre,
-                                sem limite de vagas, com o objetivo de ampliar o conhecimento sobre a temática.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="faq-item">
-                    <h3>
-                        <button
-                            id="faq-pergunta-3"
-                            class="faq-pergunta"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="faq-resposta-3">
-                            <span>Quais são os Recursos presentes neste Módulo?</span>
-                            <span class="faq-icone" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-
-                    <div
-                        id="faq-resposta-3"
-                        class="faq-resposta"
-                        role="region"
-                        aria-labelledby="faq-pergunta-3"
-                        hidden>
-                        <div>
-                            <p>
-                                Slides, vídeos, histórias em quadrinhos, leituras complementares e atividades de
-                                múltipla escolha.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="faq-item">
-                    <h3>
-                        <button
-                            id="faq-pergunta-4"
-                            class="faq-pergunta"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="faq-resposta-4">
-                            <span>Como é feita a Avaliação?</span>
-                            <span class="faq-icone" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-
-                    <div
-                        id="faq-resposta-4"
-                        class="faq-resposta"
-                        role="region"
-                        aria-labelledby="faq-pergunta-4"
-                        hidden>
-                        <div>
-                            <p>
-                                Você realizará dois questionários: um de avaliação do módulo e outro de autoavaliação,
-                                permitindo refletir sobre seu aprendizado e participação.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="faq-item">
-                    <h3>
-                        <button
-                            id="faq-pergunta-5"
-                            class="faq-pergunta"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="faq-resposta-5">
-                            <span>Como é o processo de Certificação?</span>
-                            <span class="faq-icone" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-
-                    <div
-                        id="faq-resposta-5"
-                        class="faq-resposta"
-                        role="region"
-                        aria-labelledby="faq-pergunta-5"
-                        hidden>
-                        <div>
-                            <p>
-                                Para obter o certificado, é necessário: concluir 100% das atividades, responder à
-                                avaliação de qualidade do módulo e alcançar, no mínimo, 70% de aproveitamento nas
-                                atividades avaliativas.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
     </main>
 
     <footer id="rodape-modulo">

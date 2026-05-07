@@ -61,8 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 .banner-info-card,
                 .unidade-card,
-                #forum-pratica-card,
-                .faq-item {
+                .forum-pratica-card {
                     transition:
                         transform 0.28s ease,
                         box-shadow 0.28s ease,
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     border-color: rgba(115, 95, 32, 0.5);
                 }
 
-                #forum-pratica-card:hover {
+                .forum-pratica-card:hover {
                     transform: translateY(-5px);
                     box-shadow: 0 30px 70px rgba(31, 45, 31, 0.16);
                 }
@@ -85,16 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     box-shadow: 0 26px 62px rgba(31, 45, 31, 0.18);
                 }
 
-                .faq-item:hover {
-                    transform: translateX(4px);
-                }
-
-                .faq-item.ativo {
-                    box-shadow: 0 28px 70px rgba(31, 45, 31, 0.13);
-                }
-
                 .unidade-card-botao,
-                #forum-pratica-botao {
+                .forum-pratica-botao {
                     position: relative;
                     overflow: hidden;
                 }
@@ -138,8 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 @media (max-width: 768px) {
                     .unidade-card:hover,
                     .banner-info-card:hover,
-                    #forum-pratica-card:hover,
-                    .faq-item:hover {
+                    .forum-pratica-card:hover {
                         transform: none;
                     }
                 }
@@ -150,8 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     #banner-modulo-logo,
                     .banner-info-card,
                     .unidade-card,
-                    #forum-pratica-card,
-                    .faq-item,
+                    .forum-pratica-card,
                     .js-barra-progresso,
                     .js-contador-pulso {
                         opacity: 1 !important;
@@ -179,14 +168,146 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', atualizarBarraProgresso, { passive: true });
     atualizarBarraProgresso();
 
+    const abrirMenu = document.getElementById('abrir-menu-navegacao');
+    const fecharMenu = document.getElementById('fechar-menu-navegacao');
+    const menuLateral = document.getElementById('menu-navegacao-lateral');
+    const menuBackdrop = document.getElementById('menu-navegacao-backdrop');
+    const menuUnidadesLista = document.getElementById('menu-unidades-lista');
+    const listaUnidades = document.getElementById('unidades-modulo-lista');
+
+    const fecharMenuLateral = (devolverFoco = true) => {
+        if (!abrirMenu || !menuLateral || !menuBackdrop) return;
+
+        menuBackdrop.classList.remove('is-visible');
+        menuLateral.classList.remove('is-open');
+
+        menuLateral.setAttribute('aria-hidden', 'true');
+        menuLateral.setAttribute('inert', '');
+        abrirMenu.setAttribute('aria-expanded', 'false');
+
+        setTimeout(() => {
+            menuBackdrop.hidden = true;
+        }, 250);
+
+        if (devolverFoco) {
+            abrirMenu.focus();
+        }
+    };
+
+    const criarMenuUnidades = () => {
+        if (!menuUnidadesLista || !listaUnidades) return;
+
+        const unidades = Array.from(listaUnidades.querySelectorAll('.unidade-card'));
+
+        menuUnidadesLista.innerHTML = '';
+
+        unidades.forEach((unidade, index) => {
+            const titulo = unidade.querySelector('.unidade-card-conteudo h3[id]');
+            const botao = unidade.querySelector('.unidade-card-botao[href]');
+
+            if (!titulo || !botao) return;
+
+            const textoTitulo = titulo.textContent.trim() || `Unidade ${index + 1}`;
+            const item = document.createElement('li');
+            const link = document.createElement('a');
+
+            link.className = 'menu-link';
+            link.href = botao.getAttribute('href');
+            link.textContent = textoTitulo;
+            link.setAttribute('aria-label', botao.getAttribute('aria-label') || `Acessar ${textoTitulo}`);
+
+            const target = botao.getAttribute('target');
+            const rel = botao.getAttribute('rel');
+
+            if (target) {
+                link.target = target;
+            }
+
+            if (rel) {
+                link.rel = rel;
+            } else if (target === '_blank') {
+                link.rel = 'noopener noreferrer';
+            }
+
+            link.addEventListener('click', () => {
+                setTimeout(() => {
+                    fecharMenuLateral(false);
+                }, 0);
+            });
+
+            item.appendChild(link);
+            menuUnidadesLista.appendChild(item);
+        });
+    };
+
+    const abrirMenuLateral = () => {
+        if (!abrirMenu || !fecharMenu || !menuLateral || !menuBackdrop) return;
+
+        criarMenuUnidades();
+        menuBackdrop.hidden = false;
+        menuLateral.removeAttribute('inert');
+
+        requestAnimationFrame(() => {
+            menuBackdrop.classList.add('is-visible');
+            menuLateral.classList.add('is-open');
+        });
+
+        menuLateral.setAttribute('aria-hidden', 'false');
+        abrirMenu.setAttribute('aria-expanded', 'true');
+        fecharMenu.focus();
+    };
+
+    if (abrirMenu && fecharMenu && menuLateral && menuBackdrop && menuUnidadesLista) {
+        criarMenuUnidades();
+
+        abrirMenu.addEventListener('click', abrirMenuLateral);
+        fecharMenu.addEventListener('click', () => fecharMenuLateral());
+        menuBackdrop.addEventListener('click', () => fecharMenuLateral());
+
+        document.addEventListener('keydown', (event) => {
+            if (!menuLateral.classList.contains('is-open')) return;
+
+            if (event.key === 'Escape') {
+                fecharMenuLateral();
+                return;
+            }
+
+            if (event.key !== 'Tab') return;
+
+            const focoElementos = menuLateral.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+
+            if (!focoElementos.length) return;
+
+            const primeiroElemento = focoElementos[0];
+            const ultimoElemento = focoElementos[focoElementos.length - 1];
+
+            if (event.shiftKey && document.activeElement === primeiroElemento) {
+                event.preventDefault();
+                ultimoElemento.focus();
+            } else if (!event.shiftKey && document.activeElement === ultimoElemento) {
+                event.preventDefault();
+                primeiroElemento.focus();
+            }
+        });
+
+        if (listaUnidades && 'MutationObserver' in window) {
+            const observadorUnidades = new MutationObserver(criarMenuUnidades);
+
+            observadorUnidades.observe(listaUnidades, {
+                childList: true,
+                subtree: true
+            });
+        }
+    }
+
     const elementosParaAnimar = document.querySelectorAll(`
                 #banner-modulo-box-textual,
                 .banner-info-card,
-                #forum-pratica-card,
+                .forum-pratica-card,
                 #unidades-modulo-cabecalho,
-                .unidade-card,
-                #faq-modulo-cabecalho,
-                .faq-item
+                .unidade-card
             `);
 
     elementosParaAnimar.forEach((elemento, index) => {
@@ -194,8 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (
             elemento.classList.contains('banner-info-card') ||
-            elemento.classList.contains('unidade-card') ||
-            elemento.classList.contains('faq-item')
+            elemento.classList.contains('unidade-card')
         ) {
             elemento.classList.add(`js-delay-${(index % 4) + 1}`);
         }
@@ -297,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animarContadores();
     }
 
-    const botoes = document.querySelectorAll('.unidade-card-botao, #forum-pratica-botao');
+    const botoes = document.querySelectorAll('.unidade-card-botao, .forum-pratica-botao');
 
     botoes.forEach((botao) => {
         botao.addEventListener('click', (evento) => {
@@ -322,42 +442,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 ripple.remove();
             }, 600);
-        });
-    });
-
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    const fecharFaq = (item) => {
-        const pergunta = item.querySelector('.faq-pergunta');
-        const resposta = item.querySelector('.faq-resposta');
-
-        item.classList.remove('ativo');
-        pergunta.setAttribute('aria-expanded', 'false');
-        resposta.hidden = true;
-    };
-
-    const abrirFaq = (item) => {
-        const pergunta = item.querySelector('.faq-pergunta');
-        const resposta = item.querySelector('.faq-resposta');
-
-        item.classList.add('ativo');
-        pergunta.setAttribute('aria-expanded', 'true');
-        resposta.hidden = false;
-    };
-
-    faqItems.forEach((item) => {
-        const pergunta = item.querySelector('.faq-pergunta');
-
-        pergunta.addEventListener('click', () => {
-            const itemEstaAberto = item.classList.contains('ativo');
-
-            faqItems.forEach((faq) => {
-                fecharFaq(faq);
-            });
-
-            if (!itemEstaAberto) {
-                abrirFaq(item);
-            }
         });
     });
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidade 1 | PICS para ACS e ACE</title>
+    <title>Introdução | PICS para ACS e ACE</title>
 
     <link rel="stylesheet" href="./../../assets/css/reset.css">
     <link rel="stylesheet" href="./../../assets/css/style-conteudo.css">
@@ -13,7 +13,7 @@
 <body>
     <div class="menu-navegacao-wrapper">
         <button id="abrir-menu-navegacao" class="menu-navegacao-botao" type="button"
-            aria-label="Abrir menu de navegação da unidade" aria-expanded="false"
+            aria-label="Abrir menu de navegação da introdução" aria-expanded="false"
             aria-controls="menu-navegacao-lateral">
             <span class="menu-navegacao-icone" aria-hidden="true">
                 <span></span>
@@ -26,8 +26,8 @@
 
     <div id="menu-navegacao-backdrop" class="menu-navegacao-backdrop" hidden></div>
 
-    <aside id="menu-navegacao-lateral" class="menu-navegacao-lateral" aria-label="Menu de navegação da Unidade 1"
-        aria-hidden="true">
+    <aside id="menu-navegacao-lateral" class="menu-navegacao-lateral" aria-label="Menu de navegação da introdução"
+        aria-hidden="true" inert>
         <div class="menu-navegacao-cabecalho">
             <h2>Menu Navegação</h2>
 
@@ -37,32 +37,38 @@
             </button>
         </div>
 
-        <nav class="menu-navegacao-conteudo" aria-label="Tópicos da unidade">
+        <nav class="menu-navegacao-conteudo" aria-label="Tópicos da introdução">
             <section class="menu-navegacao-grupo" aria-labelledby="menu-apresentacao-titulo">
-                <h3 id="menu-apresentacao-titulo">Apresentação da Unidade</h3>
+                <h3 id="menu-apresentacao-titulo">Apresentação</h3>
 
                 <ul>
                     <li>
                         <button type="button" class="menu-link is-current" data-page="1">
-                            Acordo Pedagógico
+                            Boas-Vindas
                         </button>
                     </li>
                 </ul>
             </section>
 
             <section class="menu-navegacao-grupo" aria-labelledby="menu-conteudo-titulo">
-                <h3 id="menu-conteudo-titulo">Conteúdo da Unidade</h3>
+                <h3 id="menu-conteudo-titulo">Conteúdo da Introdução</h3>
 
                 <ul>
                     <li>
                         <button type="button" class="menu-link" data-page="2">
-                            Seja muito bem-vindo(a)!
+                            Plano do Módulo
                         </button>
                     </li>
 
                     <li>
                         <button type="button" class="menu-link" data-page="3">
                             Conhecendo o Módulo
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="menu-link" data-page="4">
+                            Acordo Pedagógico
                         </button>
                     </li>
                 </ul>
@@ -78,19 +84,20 @@
                 alt="Logotipo da Política Nacional de Práticas Integrativas e Complementares">
 
             <h1 id="banner-conteudo-titulo">
-                <span id="banner-conteudo-titulo-unidade">Unidade 1</span>
-                Introdução às PICS no SUS: Princípios e bases legais
+                <span id="banner-conteudo-titulo-unidade">Introdução</span>
+                Apresentação do Módulo
             </h1>
         </div>
     </header>
 
     <main id="conteudo-principal" tabindex="-1">
         <section id="conteudo-unidade" aria-labelledby="conteudo-unidade-titulo">
+            <h2 id="conteudo-unidade-titulo" class="visually-hidden">Conteúdo da introdução</h2>
 
             <article id="pagina-conteudo" class="pagina-conteudo" aria-live="polite" aria-label="Conteúdo da página">
             </article>
 
-            <nav class="paginacao-container" aria-label="Paginação da unidade">
+            <nav class="paginacao-container" aria-label="Paginação da introdução">
                 <div class="paginacao-botoes">
                     <button id="botao-voltar" class="paginacao-botao" type="button" aria-controls="pagina-conteudo">
                         <span class="paginacao-icone" aria-hidden="true">←</span>
@@ -98,7 +105,7 @@
                     </button>
 
                     <p id="paginacao-indicador" class="paginacao-indicador" aria-live="polite">
-                        Página 1 de 3
+                        Página 1 de 4
                     </p>
 
                     <button id="botao-avancar" class="paginacao-botao paginacao-botao-proximo" type="button" aria-controls="pagina-conteudo">
@@ -129,6 +136,402 @@
 
         const paginasUnidade = [
             {
+                titulo: "Boas-Vindas",
+                classe: "pagina-boas-vindas",
+                conteudo: `
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
+
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Introdução</span>
+
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Boas-Vindas!</h2>
+
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                       As Práticas Integrativas e Complementares em Saúde (PICS) são importantes 
+                       ferramentas de cuidado, pois consideram o ser humano em sua totalidade, nas 
+                       dimensões física, emocional, mental e social. Essas práticas ampliam as formas 
+                       de cuidado em saúde, fortalecem o olhar dos profissionais sobre o processo 
+                       saúde-doença e incentivam o autocuidado de forma consciente e responsável.
+                    </p>
+                </div>
+
+                <figure class="conteudo-texto-imagem-flex-imagem conteudo-figura" aria-labelledby="figura-1-titulo">
+                    <p id="figura-1-titulo" class="conteudo-figura-titulo">
+                        Figura 1 - Boas-vindas ao módulo (IA Generativa)
+                    </p>
+
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/moça-dando-boas-vindas.png"
+                        alt="Moça dando boas-vindas ao módulo sobre PICS">
+
+                    <figcaption class="conteudo-figura-fonte">
+                        Fonte: Imagem gerada por IA - ChatGPT 5.5
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
+            <h2 id="conteudo-texto-corrido-titulo" class="visually-hidden">Mensagem de boas-vindas</h2>
+
+            <p>
+                É com grande satisfação que acolhemos você no módulo Práticas Integrativas e 
+                Complementares em Saúde (PICS) na Atuação de Agentes Comunitários de Saúde e 
+                Agentes de Combate às Endemias.
+            </p>
+
+            <p>
+                Neste percurso, você encontrará recursos didáticos variados e pensados para apoiar 
+                sua aprendizagem. O objetivo é contribuir com a qualificação profissional para o uso 
+                seguro e responsável das PICS na Atenção Primária, fortalecendo a promoção da saúde e 
+                o cuidado integral à população.
+            </p>
+
+            <p>
+                Este módulo também busca incentivar a atuação de Agentes Comunitários de Saúde (ACS) e 
+                Agentes de Combate às Endemias (ACE) no território, ampliando possibilidades de cuidado 
+                por meio das PICS. Ele integra as ações do Ministério da Saúde voltadas à implementação 
+                da Política Nacional de Práticas Integrativas e Complementares no SUS (PNPIC), tornando 
+                essas práticas mais acessíveis aos profissionais da área.
+            </p>
+
+            <p>
+               A formação é destinada a ACS, ACE, usuários do SUS e demais pessoas interessadas na temática. 
+               Ao longo do módulo, você terá contato com práticas como:
+            </p>
+
+            <div class="lista-nao-ordenada-personalizada-wrapper" aria-label="Lista de práticas integrativas e complementares">
+                <div class="lista-nao-ordenada-personalizada-card" style="background: #3A938B;">
+                    <ul class="lista-nao-ordenada-personalizada">
+                        <li style="background-color: #FFF;">Plantas medicinais e fitoterapia</li>
+                        <li style="background-color: #FFF;">Práticas corporais da Medicina Tradicional Chinesa (MTC)</li>
+                        <li style="background-color: #FFF;">Terapia Comunitária Integrativa (TCI)</li>
+                        <li style="background-color: #FFF;">Yoga</li>
+                        <li style="background-color: #FFF;">Meditação</li>
+                        <li style="background-color: #FFF;">Automassagem</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>
+                Essas práticas podem apoiar a promoção da saúde, o cuidado integral e o fortalecimento 
+                da autonomia no dia a dia.
+            </p>
+
+            <p>
+                O módulo foi organizado com base nas diretrizes da PNPIC e tem como proposta oferecer 
+                ferramentas práticas para sua atuação. Ele está estruturado em:
+            </p>
+
+            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
+                <div class="lista-ordenada-estilizada-1-card">
+                    <h2 id="lista-ordenada-estilizada-1-titulo">
+                        Ao longo do percurso, você será convidado(a) a:
+                    </h2>
+
+                    <ol class="lista-ordenada-estilizada-1">
+                        <li>uma unidade inicial de apresentação;</li>
+                        <li>quatro unidades de estudo;</li>
+                        <li>uma unidade de encerramento e avaliação.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p>
+                Em cada unidade, você encontrará materiais diversos como textos, vídeos, apresentações, 
+                histórias em quadrinhos e estudos de caso. Além das atividades “Dialogando com a Prática”, 
+                que convidam você a relacionar os conteúdos com sua realidade e seu contexto de trabalho.
+            </p>
+
+            <p>
+                Para iniciar, você assistirá a um vídeo de acolhimento apresentado pelo <span class="conteudo-texto-corrido-marcacao">Núcleo Técnico 
+                de Gestão da Política Nacional de Práticas Integrativas e Complementares no SUS</span>, que dá 
+                as boas-vindas e apresenta este percurso formativo.
+            </p>
+
+            <p>
+                Esperamos que este seja um espaço de aprendizado significativo, troca de experiências e 
+                construção coletiva.
+            </p>
+
+            <p>
+                <strong>Desejamos uma excelente jornada!</strong>
+            </p>
+
+        </section>
+                `
+            },
+            {
+                titulo: "Plano do Módulo",
+                classe: "plano-do-modulo",
+                conteudo: `
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
+
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Informações</span>
+
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Plano do Módulo</h2>
+
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                       Este módulo foi estruturado e dividido em unidades com o objetivo de promover a 
+                       qualificação profissional de Agentes Comunitários de Saúde e Agentes de Combate 
+                       às Endemias para o uso responsável, seguro e eficaz das PICS na Atenção Primária 
+                       à Saúde, contribuindo para a promoção da saúde e do cuidado integral da população 
+                       adscrita.
+                    </p>
+                </div>
+
+                <figure class="conteudo-texto-imagem-flex-imagem conteudo-figura" aria-labelledby="figura-2-titulo">
+                    <p id="figura-2-titulo" class="conteudo-figura-titulo">
+                        Figura 2 - Plano do módulo
+                    </p>
+
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/plano_objetivo.jpg"
+                        alt="Moça dando boas-vindas ao módulo sobre PICS">
+
+                    <figcaption class="conteudo-figura-fonte">
+                        Fonte: Magnific.com
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="faq-modulo" aria-labelledby="faq-modulo-titulo">
+            <div class="faq-modulo-cabecalho">
+                <span>Respondendo Perguntas</span>
+                <h2 id="faq-modulo-titulo" class="faq-modulo-titulo">Informações sobre o Módulo</h2>
+            </div>
+
+            <div class="faq-modulo-container">
+
+                <article class="faq-item ativo">
+                    <h3>
+                        <button
+                            id="faq-pergunta-1"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="true"
+                            aria-controls="faq-resposta-1">
+                            <span>Qual é o Objetivo do Módulo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+
+                    <div
+                        id="faq-resposta-1"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-1">
+                        <div>
+                            <p>
+                                Qualificar Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE)
+                                para o uso seguro e responsável das PICS no território. Ao longo do módulo, você irá
+                                compreender conceitos, bases legais e aspectos éticos relacionados a práticas como plantas
+                                medicinais e fitoterapia, Medicina Tradicional Chinesa, Terapia Comunitária Integrativa
+                                (TCI), Yoga, Meditação e Automassagem, contribuindo para a promoção da saúde e o cuidado
+                                integral.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-2"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-2">
+                            <span>Quem é o Público Alvo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+
+                    <div
+                        id="faq-resposta-2"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-2"
+                        hidden>
+                        <div>
+                            <p>
+                                Destina-se a ACS, ACE, usuários do SUS e demais interessados. O acesso é livre,
+                                sem limite de vagas, com o objetivo de ampliar o conhecimento sobre a temática.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-3"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-3">
+                            <span>Quais são os Recursos presentes neste Módulo?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+
+                    <div
+                        id="faq-resposta-3"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-3"
+                        hidden>
+                        <div>
+                            <p>
+                                Slides, vídeos, histórias em quadrinhos, leituras complementares e atividades de
+                                múltipla escolha.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-4"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-4">
+                            <span>Como é feita a Avaliação?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+
+                    <div
+                        id="faq-resposta-4"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-4"
+                        hidden>
+                        <div>
+                            <p>
+                                Você realizará dois questionários: um de avaliação do módulo e outro de autoavaliação,
+                                permitindo refletir sobre seu aprendizado e participação.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3>
+                        <button
+                            id="faq-pergunta-5"
+                            class="faq-pergunta"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-resposta-5">
+                            <span>Como é o processo de Certificação?</span>
+                            <span class="faq-icone" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+
+                    <div
+                        id="faq-resposta-5"
+                        class="faq-resposta"
+                        role="region"
+                        aria-labelledby="faq-pergunta-5"
+                        hidden>
+                        <div>
+                            <p>
+                                Para obter o certificado, é necessário: concluir 100% das atividades, responder à
+                                avaliação de qualidade do módulo e alcançar, no mínimo, 70% de aproveitamento nas
+                                atividades avaliativas.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+                `
+            },
+            {
+                titulo: "Conhecendo o Módulo",
+                classe: "pagina-conhecendo-o-modulo",
+                conteudo: `
+        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
+            <div class="conteudo-texto-imagem-flex-card">
+
+                <div class="conteudo-texto-imagem-flex-conteudo">
+                    <span class="conteudo-texto-imagem-flex-tag">Conhecer</span>
+
+                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Conhecendo o Módulo</h2>
+
+                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
+                       Você está iniciando um módulo organizado em cinco unidades. A primeira é este 
+                       espaço de acolhimento, onde apresentamos a estrutura, os objetivos e os conteúdos 
+                       do percurso formativo. Aqui, você também conhecerá a Política Nacional de Práticas 
+                       Integrativas e Complementares no SUS, além do contexto das PICS no Brasil e no mundo.
+                    </p>
+                </div>
+
+                <figure class="conteudo-texto-imagem-flex-imagem conteudo-figura" aria-labelledby="figura-3-titulo">
+                    <p id="figura-3-titulo" class="conteudo-figura-titulo">
+                        Figura 3 - Conhecendo o módulo
+                    </p>
+
+                    <img
+                        src="./../../assets/images/unidades/unidade-01/comecando-o-modulo.jpg"
+                        alt="Moça dando boas-vindas ao módulo sobre PICS">
+
+                    <figcaption class="conteudo-figura-fonte">
+                        Fonte: Magnific.com
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
+            <h2 id="conteudo-texto-corrido-titulo" class="visually-hidden">Estrutura do módulo</h2>
+
+            <p>
+               Este módulo foi pensado para apoiar a atuação de Agentes Comunitários de Saúde (ACS) 
+               e Agentes de Combate às Endemias (ACE) no território, por meio do uso das PICS. Ao final, 
+               você terá acesso à Biblioteca, com todos os materiais disponíveis para download, que podem 
+               ser utilizados livremente para fins educativos, desde que sem alterações, sem uso comercial 
+               e com a devida citação da fonte.
+            </p>
+            
+            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
+                <div class="lista-ordenada-estilizada-1-card">
+                    <h2 id="lista-ordenada-estilizada-1-titulo">
+                       As demais unidades contam com diferentes estratégias de aprendizagem, como:
+                    </h2>
+
+                    <ol class="lista-ordenada-estilizada-1">
+                        <li>slides com conteúdos teóricos;</li>
+                        <li>vídeos com experiências e entrevistas;</li>
+                        <li>histórias em quadrinhos para contextualização;</li>
+                        <li>a seção “Dialogando com a Prática”, com fóruns, questões e reflexões;</li>
+                        <li>leituras complementares para aprofundamento.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p>
+                O módulo também inclui momentos de autoavaliação e avaliação final.
+            </p>
+            <p>
+                <strong>Esperamos que este seja um percurso leve, significativo e útil para sua prática.</strong>
+            </p>
+
+        </section>
+                `
+            },
+            {
                 titulo: "Acordo Pedagógico",
                 classe: "pagina-acordo-pedagogico",
                 conteudo: `
@@ -148,11 +551,19 @@
                     </p>
                 </div>
 
-                <div class="conteudo-texto-imagem-flex-imagem">
+                <figure class="conteudo-texto-imagem-flex-imagem conteudo-figura" aria-labelledby="figura-4-titulo">
+                    <p id="figura-4-titulo" class="conteudo-figura-titulo">
+                        Figura 4 - Acordo Pedagógico (IA Generativa)
+                    </p>
+
                     <img
                         src="./../../assets/images/unidades/unidade-01/acordo_pedagogico_imagem.jpg"
-                        alt="Pessoas dialogando e chegando a um comum arcodo">
-                </div>
+                        alt="Pessoas dialogando e chegando a um comum acordo">
+
+                    <figcaption class="conteudo-figura-fonte">
+                        Fonte: Imagem gerada por IA - Feito em Magnific.com
+                    </figcaption>
+                </figure>
 
             </div>
         </section>
@@ -179,17 +590,19 @@
                 tem espaço para contribuir, trocar experiências e aprender com o grupo.
             </p>
 
-            <div class="conteudo-texto-corrido-imagem">
-                <figure class="conteudo-texto-corrido-imagem">
-                    <img
-                        src="./../../assets/images/unidades/unidade-01/mulher-estudando-sobre-pics.png"
-                        alt="Mulher estudando sobre PICS em um ambiente virtual">
+            <figure class="conteudo-texto-corrido-imagem conteudo-figura" aria-labelledby="figura-5-titulo">
+                <p id="figura-5-titulo" class="conteudo-figura-titulo">
+                    Figura 5 - Mulher estudando sobre PICS em Ambiente Virtual (IA Generativa)
+                </p>
 
-                    <figcaption>
-                        Mulher estudando sobre PICS em um ambiente virtual - Foto gerada por IA
-                    </figcaption>
-                </figure>
-            </div>
+                <img
+                    src="./../../assets/images/unidades/unidade-01/mulher-estudando-sobre-pics.png"
+                    alt="Mulher estudando sobre PICS em um ambiente virtual">
+
+                <figcaption class="conteudo-figura-fonte">
+                    Fonte: Imagem gerada por IA - ChatGPT 5.5
+                </figcaption>
+            </figure>
 
             <p>
                 O conteúdo disponibilizado pode ser utilizado em atividades educativas, como ações de 
@@ -212,17 +625,19 @@
                 complementar, questionar ou ampliar a discussão. Esse processo enriquece a aprendizagem de todos.
             </p>
 
-            <div class="conteudo-texto-corrido-imagem">
-                <figure class="conteudo-texto-corrido-imagem">
-                    <img
-                        src="./../../assets/images/unidades/unidade-01/mulher-interagindo-no-forum.png"
-                        alt="Mulher participando de fórum virtual sobre PICS - Foto gerada por IA">
+            <figure class="conteudo-texto-corrido-imagem conteudo-figura" aria-labelledby="figura-6-titulo">
+                <p id="figura-6-titulo" class="conteudo-figura-titulo">
+                    Figura 6 - Mulher participando de fórum virtual sobre PICS (IA Generativa)
+                </p>
 
-                    <figcaption>
-                        Mulher estudando sobre PICS em um ambiente virtual - Foto gerada por IA
-                    </figcaption>
-                </figure>
-            </div>            
+                <img
+                    src="./../../assets/images/unidades/unidade-01/mulher-interagindo-no-forum.png"
+                    alt="Mulher participando de fórum virtual sobre PICS">
+
+                <figcaption class="conteudo-figura-fonte">
+                    Fonte: Imagem gerada por IA - ChatGPT 5.5
+                </figcaption>
+            </figure>            
 
             <p>
                 Para participar, basta clicar em <span class="conteudo-texto-corrido-marcacao">“responder”</span>, 
@@ -284,192 +699,7 @@
         </section>
                 
                 `
-            },
-
-            {
-                titulo: "Boas-Vindas",
-                classe: "pagina-boas-vindas",
-                conteudo: `
-        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
-            <div class="conteudo-texto-imagem-flex-card">
-
-                <div class="conteudo-texto-imagem-flex-conteudo">
-                    <span class="conteudo-texto-imagem-flex-tag">Introdução</span>
-
-                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Boas-Vindas!</h2>
-
-                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
-                       As Práticas Integrativas e Complementares em Saúde (PICS) são importantes 
-                       ferramentas de cuidado, pois consideram o ser humano em sua totalidade, nas 
-                       dimensões física, emocional, mental e social. Essas práticas ampliam as formas 
-                       de cuidado em saúde, fortalecem o olhar dos profissionais sobre o processo 
-                       saúde-doença e incentivam o autocuidado de forma consciente e responsável.
-                    </p>
-                </div>
-
-                <div class="conteudo-texto-imagem-flex-imagem">
-                    <img
-                        src="./../../assets/images/unidades/unidade-01/moça-dando-boas-vindas.png"
-                        alt="Moça dando boas-vindas ao módulo sobre PICS">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
-            <p>
-                É com grande satisfação que acolhemos você no módulo Práticas Integrativas e 
-                Complementares em Saúde (PICS) na Atuação de Agentes Comunitários de Saúde e 
-                Agentes de Combate às Endemias.
-            </p>
-
-            <p>
-                Neste percurso, você encontrará recursos didáticos variados e pensados para apoiar 
-                sua aprendizagem. O objetivo é contribuir com a qualificação profissional para o uso 
-                seguro e responsável das PICS na Atenção Primária, fortalecendo a promoção da saúde e 
-                o cuidado integral à população.
-            </p>
-
-            <p>
-                Este módulo também busca incentivar a atuação de Agentes Comunitários de Saúde (ACS) e 
-                Agentes de Combate às Endemias (ACE) no território, ampliando possibilidades de cuidado 
-                por meio das PICS. Ele integra as ações do Ministério da Saúde voltadas à implementação 
-                da Política Nacional de Práticas Integrativas e Complementares no SUS (PNPIC), tornando 
-                essas práticas mais acessíveis aos profissionais da área.
-            </p>
-
-            <p>
-               A formação é destinada a ACS, ACE, usuários do SUS e demais pessoas interessadas na temática. 
-               Ao longo do módulo, você terá contato com práticas como:
-            </p>
-
-            <div class="lista-nao-ordenada-personalizada-wrapper" aria-label="Lista de práticas integrativas e complementares">
-                <div class="lista-nao-ordenada-personalizada-card" style="background: #c7e3fc;">
-                    <ul class="lista-nao-ordenada-personalizada">
-                        <li style="background-color: #FFF;">Plantas medicinais e fitoterapia</li>
-                        <li style="background-color: #FFF;">Práticas corporais da Medicina Tradicional Chinesa (MTC)</li>
-                        <li style="background-color: #FFF;">Terapia Comunitária Integrativa (TCI)</li>
-                        <li style="background-color: #FFF;">Yoga</li>
-                        <li style="background-color: #FFF;">Meditação</li>
-                        <li style="background-color: #FFF;">Automassagem</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <p>
-                Essas práticas podem apoiar a promoção da saúde, o cuidado integral e o fortalecimento 
-                da autonomia no dia a dia.
-            </p>
-
-            <p>
-                O módulo foi organizado com base nas diretrizes da PNPIC e tem como proposta oferecer 
-                ferramentas práticas para sua atuação. Ele está estruturado em:
-            </p>
-
-            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
-                <div class="lista-ordenada-estilizada-1-card">
-                    <h2 id="lista-ordenada-estilizada-1-titulo">
-                        Ao longo do percurso, você será convidado(a) a:
-                    </h2>
-
-                    <ol class="lista-ordenada-estilizada-1">
-                        <li>uma unidade inicial de apresentação;</li>
-                        <li>quatro unidades de estudo;</li>
-                        <li>uma unidade de encerramento e avaliação.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <p>
-                Em cada unidade, você encontrará materiais diversos como textos, vídeos, apresentações, 
-                histórias em quadrinhos e estudos de caso. Além das atividades “Dialogando com a Prática”, 
-                que convidam você a relacionar os conteúdos com sua realidade e seu contexto de trabalho.
-            </p>
-
-            <p>
-                Para iniciar, você assistirá a um vídeo de acolhimento apresentado pelo <span class="conteudo-texto-corrido-marcacao">Núcleo Técnico 
-                de Gestão da Política Nacional de Práticas Integrativas e Complementares no SUS</span>, que dá 
-                as boas-vindas e apresenta este percurso formativo.
-            </p>
-
-            <p>
-                Esperamos que este seja um espaço de aprendizado significativo, troca de experiências e 
-                construção coletiva.
-            </p>
-
-            <p>
-                <strong>Desejamos uma excelente jornada!</strong>
-            </p>
-
-        </section>
-                `
-            },
-
-            {
-                titulo: "Conhecendo o Módulo",
-                classe: "pagina-conhecendo-o-modulo",
-                conteudo: `
-        <section class="conteudo-texto-imagem-flex" aria-labelledby="conteudo-texto-imagem-flex-titulo" aria-describedby="conteudo-texto-imagem-flex-descricao">
-            <div class="conteudo-texto-imagem-flex-card">
-
-                <div class="conteudo-texto-imagem-flex-conteudo">
-                    <span class="conteudo-texto-imagem-flex-tag">Fique por Dentro</span>
-
-                    <h2 id="conteudo-texto-imagem-flex-titulo" class="conteudo-texto-imagem-flex-titulo">Conhecendo o Módulo</h2>
-
-                    <p id="conteudo-texto-imagem-flex-descricao" class="conteudo-texto-imagem-flex-descricao">
-                       Você está iniciando um módulo organizado em cinco unidades. A primeira é este 
-                       espaço de acolhimento, onde apresentamos a estrutura, os objetivos e os conteúdos 
-                       do percurso formativo. Aqui, você também conhecerá a Política Nacional de Práticas 
-                       Integrativas e Complementares no SUS, além do contexto das PICS no Brasil e no mundo.
-                    </p>
-                </div>
-
-                <div class="conteudo-texto-imagem-flex-imagem">
-                    <img
-                        src="./../../assets/images/unidades/unidade-01/comecando-o-modulo.jpg"
-                        alt="Moça dando boas-vindas ao módulo sobre PICS">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="conteudo-texto-corrido" aria-labelledby="conteudo-texto-corrido-titulo">
-            <p>
-               Este módulo foi pensado para apoiar a atuação de Agentes Comunitários de Saúde (ACS) 
-               e Agentes de Combate às Endemias (ACE) no território, por meio do uso das PICS. Ao final, 
-               você terá acesso à Biblioteca, com todos os materiais disponíveis para download, que podem 
-               ser utilizados livremente para fins educativos, desde que sem alterações, sem uso comercial 
-               e com a devida citação da fonte.
-            </p>
-            
-            <div class="lista-ordenada-estilizada-1-wrapper" aria-labelledby="lista-ordenada-estilizada-1-titulo">
-                <div class="lista-ordenada-estilizada-1-card">
-                    <h2 id="lista-ordenada-estilizada-1-titulo">
-                       As demais unidades contam com diferentes estratégias de aprendizagem, como:
-                    </h2>
-
-                    <ol class="lista-ordenada-estilizada-1">
-                        <li>slides com conteúdos teóricos;</li>
-                        <li>vídeos com experiências e entrevistas;</li>
-                        <li>histórias em quadrinhos para contextualização;</li>
-                        <li>a seção “Dialogando com a Prática”, com fóruns, questões e reflexões;</li>
-                        <li>leituras complementares para aprofundamento.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <p>
-                O módulo também inclui momentos de autoavaliação e avaliação final.
-            </p>
-            <p>
-                <strong>Esperamos que este seja um percurso leve, significativo e útil para sua prática.</strong>
-            </p>
-
-        </section>
-                `
             }
-
         ];
 
         const paginaConteudo = document.getElementById("pagina-conteudo");
@@ -490,6 +720,7 @@
 
         const totalPaginas = paginasUnidade.length;
         let paginaAtual = 1;
+        let timeoutAnimacaoPagina = null;
 
         function limitarPagina(numero) {
             if (numero < 1) return 1;
@@ -596,6 +827,75 @@
             flutuanteAvancar.disabled = paginaAtual === totalPaginas;
         }
 
+        function inicializarFaqModulo(container) {
+            const faqItems = container.querySelectorAll(".faq-modulo .faq-item");
+
+            if (!faqItems.length) return;
+
+            const fecharFaq = (item) => {
+                const pergunta = item.querySelector(".faq-pergunta");
+                const resposta = item.querySelector(".faq-resposta");
+
+                if (!pergunta || !resposta) return;
+
+                item.classList.remove("ativo");
+                pergunta.setAttribute("aria-expanded", "false");
+                resposta.hidden = true;
+            };
+
+            const abrirFaq = (item) => {
+                const pergunta = item.querySelector(".faq-pergunta");
+                const resposta = item.querySelector(".faq-resposta");
+
+                if (!pergunta || !resposta) return;
+
+                item.classList.add("ativo");
+                pergunta.setAttribute("aria-expanded", "true");
+                resposta.hidden = false;
+            };
+
+            faqItems.forEach((item) => {
+                const pergunta = item.querySelector(".faq-pergunta");
+
+                if (!pergunta) return;
+
+                if (item.classList.contains("ativo")) {
+                    abrirFaq(item);
+                } else {
+                    fecharFaq(item);
+                }
+
+                pergunta.addEventListener("click", () => {
+                    const itemEstaAberto = item.classList.contains("ativo");
+
+                    faqItems.forEach((faq) => {
+                        fecharFaq(faq);
+                    });
+
+                    if (!itemEstaAberto) {
+                        abrirFaq(item);
+                    }
+                });
+            });
+        }
+
+        function animarEntradaPagina() {
+            const usuarioPrefereMenosMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (usuarioPrefereMenosMovimento) return;
+
+            clearTimeout(timeoutAnimacaoPagina);
+            paginaConteudo.classList.remove("pagina-conteudo-entrando");
+
+            void paginaConteudo.offsetWidth;
+
+            paginaConteudo.classList.add("pagina-conteudo-entrando");
+
+            timeoutAnimacaoPagina = setTimeout(() => {
+                paginaConteudo.classList.remove("pagina-conteudo-entrando");
+            }, 320);
+        }
+
         function renderizarPagina() {
             const pagina = paginasUnidade[paginaAtual - 1];
 
@@ -605,15 +905,21 @@
             const primeiroTitulo = paginaConteudo.querySelector("h1, h2, h3");
 
             if (primeiroTitulo) {
-                primeiroTitulo.id = "pagina-titulo";
-                paginaConteudo.setAttribute("aria-labelledby", "pagina-titulo");
+                if (!primeiroTitulo.id) {
+                    primeiroTitulo.id = "pagina-titulo";
+                }
+
+                paginaConteudo.setAttribute("aria-labelledby", primeiroTitulo.id);
                 paginaConteudo.removeAttribute("aria-label");
             } else {
                 paginaConteudo.removeAttribute("aria-labelledby");
                 paginaConteudo.setAttribute("aria-label", pagina.titulo);
             }
 
-            document.title = `${pagina.titulo} | Unidade 1 | PICS para ACS e ACE`;
+            inicializarFaqModulo(paginaConteudo);
+            animarEntradaPagina();
+
+            document.title = `${pagina.titulo} | Introdução | PICS para ACS e ACE`;
 
             atualizarPaginacao();
             atualizarMenuLateral();
@@ -631,6 +937,7 @@
 
         function abrirMenuLateral() {
             menuBackdrop.hidden = false;
+            menuLateral.removeAttribute("inert");
 
             requestAnimationFrame(() => {
                 menuBackdrop.classList.add("is-visible");
@@ -647,6 +954,7 @@
             menuLateral.classList.remove("is-open");
 
             menuLateral.setAttribute("aria-hidden", "true");
+            menuLateral.setAttribute("inert", "");
             abrirMenu.setAttribute("aria-expanded", "false");
 
             setTimeout(() => {
@@ -748,6 +1056,7 @@
                 controleFlutuante.style.visibility = 'hidden';
                 controleFlutuante.style.pointerEvents = 'none';
                 controleFlutuante.setAttribute('aria-hidden', 'true');
+                controleFlutuante.setAttribute('inert', '');
             }
 
             function mostrar() {
@@ -756,6 +1065,7 @@
                 controleFlutuante.style.visibility = '';
                 controleFlutuante.style.pointerEvents = '';
                 controleFlutuante.setAttribute('aria-hidden', 'false');
+                controleFlutuante.removeAttribute('inert');
             }
 
             const observer = new IntersectionObserver((entries) => {
@@ -833,50 +1143,9 @@
             }
 
             const estilos = document.createElement("style");
-            estilos.id = "efeitos-visuais-js";
+            estilos.id = "efeitos-visuais-conteudo-js";
 
             estilos.textContent = `
-            .js-revelar {
-                opacity: 0;
-                transform: translateY(22px);
-                transition:
-                    opacity 0.55s ease,
-                    transform 0.55s ease;
-            }
-
-            .js-revelar.is-visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .js-revelar-delay-1 {
-                transition-delay: 0.06s;
-            }
-
-            .js-revelar-delay-2 {
-                transition-delay: 0.12s;
-            }
-
-            .js-revelar-delay-3 {
-                transition-delay: 0.18s;
-            }
-
-            .pagina-conteudo.js-troca-pagina {
-                animation: jsTrocaPaginaSemSombra 0.42s ease both;
-            }
-
-            @keyframes jsTrocaPaginaSemSombra {
-                from {
-                    opacity: 0;
-                    transform: translateY(18px) scale(0.985);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                }
-            }
-
             .menu-navegacao-botao.js-respirar {
                 animation: jsRespirarSemSombra 2.8s ease-in-out infinite;
             }
@@ -963,76 +1232,14 @@
                 botaoMenuJS.classList.add("js-respirar");
             }
 
-            function prepararRevelacao(container = document) {
-                const elementos = container.querySelectorAll(`
-                #banner-conteudo-logo,
-                #banner-conteudo-titulo,
-                .pagina-conteudo h3,
-                .pagina-conteudo h4,
-                .pagina-conteudo p,
-                .pagina-conteudo ul,
-                .pagina-conteudo ol,
-                .pagina-conteudo li,
-                .acordo-imagem-item,
-                .acordo-pilares li,
-                .acordo-destaque,
-                .acordo-cards-status article
-            `);
-
-                elementos.forEach((elemento, index) => {
-                    if (elemento.classList.contains("js-revelar")) {
-                        return;
-                    }
-
-                    elemento.classList.add("js-revelar");
-
-                    const delay = index % 4;
-
-                    if (delay > 0) {
-                        elemento.classList.add(`js-revelar-delay-${delay}`);
-                    }
-                });
-            }
-
-            const observadorRevelacao = new IntersectionObserver(
-                (entradas) => {
-                    entradas.forEach((entrada) => {
-                        if (entrada.isIntersecting) {
-                            entrada.target.classList.add("is-visible");
-                            observadorRevelacao.unobserve(entrada.target);
-                        }
-                    });
-                },
-                {
-                    threshold: 0.12,
-                    rootMargin: "0px 0px -40px 0px"
-                }
-            );
-
-            function observarElementosRevelaveis(container = document) {
-                container.querySelectorAll(".js-revelar:not(.is-visible)").forEach((elemento) => {
-                    observadorRevelacao.observe(elemento);
-                });
-            }
-
-            function animarTrocaDePagina() {
-                if (!paginaConteudoJS) {
-                    return;
-                }
-
-                paginaConteudoJS.classList.remove("js-troca-pagina");
-
-                void paginaConteudoJS.offsetWidth;
-
-                paginaConteudoJS.classList.add("js-troca-pagina");
-
-                setTimeout(() => {
-                    paginaConteudoJS.classList.remove("js-troca-pagina");
-                }, 450);
-            }
-
             function ativarRippleSemSombra() {
-                document.querySelectorAll("button").forEach((botao) => {
+                document.querySelectorAll(".faq-pergunta").forEach((botaoFaq) => {
+                    botaoFaq.classList.remove("js-ripple");
+                    botaoFaq.removeAttribute("data-ripple-ativado");
+                    botaoFaq.querySelectorAll(".js-ripple-circulo").forEach((circulo) => circulo.remove());
+                });
+
+                document.querySelectorAll("button:not(.faq-pergunta)").forEach((botao) => {
                     if (botao.dataset.rippleAtivado === "true") {
                         return;
                     }
@@ -1083,8 +1290,6 @@
             function atualizarAnimacoesDaPagina() {
                 limparEfeitosDeSombraDoJS();
 
-                prepararRevelacao(document);
-                observarElementosRevelaveis(document);
                 ativarRippleSemSombra();
                 ativarDestaquesSemSombra(document);
             }
@@ -1093,7 +1298,6 @@
 
             if (paginaConteudoJS) {
                 const observadorConteudo = new MutationObserver(() => {
-                    animarTrocaDePagina();
                     atualizarAnimacoesDaPagina();
                 });
 
