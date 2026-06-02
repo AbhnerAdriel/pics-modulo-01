@@ -70,10 +70,45 @@ body {
     background-color: var(--conteudo-cor-fundo);
     color: var(--conteudo-cor-titulo);
     overflow-x: hidden;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 main {
     display: block;
+}
+
+body :where(h1, h2, h3, h4, h5, h6, p, li, dt, dd, a, button, span, strong, figcaption) {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+}
+
+body :where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+}
+
+body :where(p, li, dt, dd, figcaption) {
+    text-wrap: pretty;
+}
+
+body :where(img, picture, svg, video, canvas) {
+    max-width: 100%;
+}
+
+body :where(
+    .conteudo-texto-imagem-flex-conteudo,
+    .conteudo-texto-imagem-flex-imagem,
+    .conteudo-texto-corrido,
+    .faq-pergunta span:first-child,
+    .menu-link,
+    .paginacao-botao span,
+    .lista-ordenada-estilizada-1 li,
+    .lista-nao-ordenada-personalizada li
+) {
+    min-width: 0;
+    max-width: 100%;
 }
 
 #conteudo-principal:focus {
@@ -946,18 +981,24 @@ button:focus-visible,
     position: relative;
     min-height: 68px;
     padding: 18px 22px 18px 76px;
-    display: flex;
-    align-items: center;
+    display: block;
     background-color: rgba(255, 250, 235, 0.92);
     border-radius: 10px;
     color: #373737;
     font-size: clamp(0.98rem, 1.25vw, 1.12rem);
     line-height: 1.5;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
     transition:
         transform 0.25s ease,
         background-color 0.25s ease;
     animation: itemEntrada 0.7s ease both;
+}
+
+.lista-ordenada-estilizada-1 li strong {
+    display: inline;
+    white-space: nowrap;
 }
 
 .lista-ordenada-estilizada-1 li:nth-child(1) {
