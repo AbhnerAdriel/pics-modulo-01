@@ -602,8 +602,8 @@ button:focus-visible,
 /* ----- Página Ficha Técnica ----- */
 
 .pagina-ficha-tecnica .conteudo-texto-imagem-flex-card {
-    min-height: 0;
-    grid-template-columns: 1fr;
+    min-height: 390px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.85fr);
 }
 
 .pagina-ficha-tecnica .conteudo-texto-imagem-flex-conteudo {
