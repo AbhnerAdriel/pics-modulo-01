@@ -46,6 +46,14 @@
     --conteudo-texto-imagem-flex-cor-borda: #e1e6d8;
     --conteudo-texto-imagem-flex-cor-botao-hover: #3f5130;
 
+    --formulario-atividade-cor-fundo: #ffffff;
+    --formulario-atividade-cor-titulo: #263326;
+    --formulario-atividade-cor-texto: #4f5c4f;
+    --formulario-atividade-cor-destaque: #735f20;
+    --formulario-atividade-cor-botao: #4f633d;
+    --formulario-atividade-cor-borda: #e1e6d8;
+    --formulario-atividade-sombra: 0 24px 60px rgba(31, 45, 31, 0.11);
+
     --faq-modulo-cor-fundo-card: #ffffff;
     --faq-modulo-cor-titulo: #020b12;
     --faq-modulo-cor-texto: #3f4b55;
@@ -101,6 +109,8 @@ body :where(
     .conteudo-texto-imagem-flex-conteudo,
     .conteudo-texto-imagem-flex-imagem,
     .conteudo-texto-corrido,
+    .formulario-atividade-conteudo,
+    .formulario-atividade-imagem,
     .faq-pergunta span:first-child,
     .menu-link,
     .paginacao-botao span,
@@ -124,6 +134,8 @@ button,
 .unidade-card-botao,
 .conteudo-texto-imagem-flex-tag,
 .conteudo-texto-imagem-flex-botao,
+.formulario-atividade-tag,
+.formulario-atividade-botao,
 #unidades-modulo-cabecalho span,
 .faq-modulo-cabecalho span {
     font-family: var(--fonte-auxiliar);
@@ -139,6 +151,7 @@ button:focus-visible,
 .faq-pergunta:focus-visible,
 .unidade-card-botao:focus-visible,
 .conteudo-texto-imagem-flex-botao:focus-visible,
+.formulario-atividade-botao:focus-visible,
 .menu-navegacao-botao:focus-visible,
 .menu-navegacao-fechar:focus-visible,
 .menu-link:focus-visible,
@@ -151,7 +164,8 @@ button:focus-visible,
 }
 
 .unidade-card-botao:focus-visible,
-.conteudo-texto-imagem-flex-botao:focus-visible {
+.conteudo-texto-imagem-flex-botao:focus-visible,
+.formulario-atividade-botao:focus-visible {
     transform: none;
 }
 
@@ -632,6 +646,172 @@ button:focus-visible,
     font-weight: 800;
     font-style: normal;
     text-align: left;
+}
+
+/* ----- Seção Formulário ----- */
+
+.formulario-atividade {
+    width: min(100%, 1040px);
+
+    margin: 0 auto;
+}
+
+.formulario-atividade-card {
+    min-height: 390px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background-color: var(--formulario-atividade-cor-fundo);
+
+    border: 1px solid var(--formulario-atividade-cor-borda);
+    border-radius: 34px;
+
+    box-shadow: var(--formulario-atividade-sombra);
+}
+
+.formulario-atividade-card::before {
+    content: "";
+
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    z-index: 1;
+
+    width: 210px;
+    height: 210px;
+
+    background-color: rgba(219, 191, 127, 0.16);
+
+    border-radius: 50%;
+}
+
+.formulario-atividade-conteudo {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 54px 58px;
+}
+
+.formulario-atividade-tag {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+    padding: 10px 16px;
+
+    background-color: rgba(219, 191, 127, 0.16);
+    color: var(--formulario-atividade-cor-botao);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.formulario-atividade-titulo {
+    max-width: 620px;
+
+    margin-bottom: 20px;
+
+    color: var(--formulario-atividade-cor-destaque);
+
+    font-family: var(--fonte-auxiliar);
+    font-size: clamp(20px, 3.7vw, 32px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.formulario-atividade-conteudo p {
+    max-width: 720px;
+
+    margin-bottom: 32px;
+
+    color: var(--formulario-atividade-cor-texto);
+
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 400;
+}
+
+.formulario-atividade-botao {
+    min-height: 60px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 0 28px;
+
+    background-color: var(--formulario-atividade-cor-botao);
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 800;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.formulario-atividade-botao span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.formulario-atividade-imagem {
+    position: relative;
+
+    min-height: 300px;
+
+    overflow: hidden;
+}
+
+.formulario-atividade-imagem::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+}
+
+.formulario-atividade-imagem img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(0.6);
+
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.formulario-atividade-card:hover .formulario-atividade-imagem img {
+    filter: brightness(1.03) contrast(1.02);
+
+    transform: scale(0.65);
 }
 
 /* ----- Página Ficha Técnica ----- */
@@ -2255,6 +2435,18 @@ button:focus-visible,
         font-size: 17px;
     }
 
+    .formulario-atividade-card {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
+    }
+
+    .formulario-atividade-conteudo {
+        padding: 46px 44px;
+    }
+
+    .formulario-atividade-conteudo p {
+        font-size: 17px;
+    }
+
     .faq-modulo {
         width: 100%;
     }
@@ -2347,6 +2539,60 @@ button:focus-visible,
 
     .conteudo-texto-corrido-imagem .conteudo-figura-fonte {
         font-size: 11px;
+    }
+
+    .formulario-atividade {
+        width: min(100%, 520px);
+
+        margin-top: 54px;
+    }
+
+    .formulario-atividade-card {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        border-radius: 28px;
+    }
+
+    .formulario-atividade-conteudo {
+        padding: 30px 24px 28px;
+    }
+
+    .formulario-atividade-tag {
+        margin-bottom: 12px;
+        padding: 9px 14px;
+
+        font-size: 11.5px;
+    }
+
+    .formulario-atividade-titulo {
+        margin-bottom: 16px;
+
+        font-size: clamp(20px, 7.4vw, 32px);
+    }
+
+    .formulario-atividade-conteudo p {
+        margin-bottom: 24px;
+
+        font-size: 15.5px;
+        line-height: 1.55;
+    }
+
+    .formulario-atividade-botao {
+        width: 100%;
+        min-height: 58px;
+
+        font-size: 16px;
+    }
+
+    .formulario-atividade-imagem {
+        min-height: 250px;
+    }
+
+    .formulario-atividade-imagem::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.18));
     }
 
     .faq-modulo-cabecalho {
@@ -2568,6 +2814,41 @@ button:focus-visible,
         height: 250px;
     }
 
+    .formulario-atividade {
+        margin-top: 44px;
+    }
+
+    .formulario-atividade-card {
+        border-radius: 24px;
+    }
+
+    .formulario-atividade-conteudo {
+        padding: 26px 20px 24px;
+    }
+
+    .formulario-atividade-tag {
+        font-size: 10.5px;
+    }
+
+    .formulario-atividade-titulo {
+        font-size: clamp(20px, 7vw, 30px);
+    }
+
+    .formulario-atividade-conteudo p {
+        font-size: 15px;
+        line-height: 1.52;
+    }
+
+    .formulario-atividade-botao {
+        min-height: 56px;
+
+        font-size: 16px;
+    }
+
+    .formulario-atividade-imagem {
+        min-height: 220px;
+    }
+
     .faq-pergunta {
         min-height: 78px;
 
@@ -2672,6 +2953,32 @@ button:focus-visible,
         height: 220px;
     }
 
+    .formulario-atividade-card {
+        border-radius: 22px;
+    }
+
+    .formulario-atividade-conteudo {
+        padding: 24px 18px 22px;
+    }
+
+    .formulario-atividade-titulo {
+        font-size: 23px;
+    }
+
+    .formulario-atividade-conteudo p {
+        font-size: 14.5px;
+    }
+
+    .formulario-atividade-botao {
+        min-height: 54px;
+
+        font-size: 16px;
+    }
+
+    .formulario-atividade-imagem {
+        min-height: 200px;
+    }
+
     .faq-pergunta {
         padding: 20px 18px;
     }
@@ -2702,6 +3009,7 @@ button:focus-visible,
     .menu-navegacao-lateral,
     .menu-navegacao-backdrop,
     .pagina-conteudo,
+    .formulario-atividade-imagem img,
     .progresso-circular-valor,
     .faq-item,
     .faq-resposta,
@@ -2712,6 +3020,12 @@ button:focus-visible,
 
     .pagina-conteudo.pagina-conteudo-entrando {
         animation: none !important;
+    }
+
+    .formulario-atividade-imagem img,
+    .formulario-atividade-card:hover .formulario-atividade-imagem img {
+        filter: none !important;
+        transform: none !important;
     }
 }
 
