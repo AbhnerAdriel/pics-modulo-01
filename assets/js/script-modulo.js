@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const textosAnimaveis = Array.from(document.querySelectorAll('.banner-info-conteudo p')).filter((texto) => {
             const conteudo = texto.textContent.trim().toLowerCase();
 
-            return conteudo === '20 horas' || conteudo === '5 unidades';
+            return /^\d+\s+horas?$/.test(conteudo) || /^\d+\s+unidades?$/.test(conteudo);
         });
 
         textosAnimaveis.forEach((texto) => {
