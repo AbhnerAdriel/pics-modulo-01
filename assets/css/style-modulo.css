@@ -432,7 +432,7 @@ button:focus-visible,
 #banner-modulo .dark-overlay {
     z-index: 1;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.58);
 
     border-bottom-right-radius: var(--border-radius-banner-modulo);
     border-bottom-left-radius: var(--border-radius-banner-modulo);
